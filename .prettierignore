@@ -1,0 +1,14 @@
+.idea
+.github
+.husky
+.prettierignore
+*.json
+
+*.svg
+*.png
+*.txt
+*.xml
+
+out
+dist
+node_modules

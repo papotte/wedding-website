@@ -1,0 +1,19 @@
+@import "bootstrap/variables";
+
+:export {
+    primaryColor: $brand-primary;
+    successColor: $brand-success;
+    infoColor: $brand-info;
+    warningColor: $brand-warning;
+    dangerColor: $brand-danger;
+    grayBase: $gray-base;
+    grayDarker: $gray-darker;
+    grayDark: $gray-dark;
+    gray: $gray;
+    grayLight: $gray-light;
+    grayLighter: $gray-lighter;
+    backgroundColor: $body-bg;
+    textColor: $text-color;
+    linkColor: $link-color;
+    linkHoverColor: $link-hover-color;
+}
