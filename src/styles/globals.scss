@@ -2,10 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
-@import "style";
+@import "variables.scss";
 
 :root {
     --foreground-rgb: 0, 0, 0;
+    --primaryColor: theme('colors.primary');
+    --successColor: theme('colors.success');
+    --infoColor: theme('colors.info');
+    --warningColor: theme('colors.warning');
+    --dangerColor: theme('colors.danger');
+    --grayBase: $gray-base;
+    --grayDarker: $gray-darker;
+    --grayDark: $gray-dark;
+    --gray: $gray;
+    --grayLight: $gray-light;
+    --grayLighter: $gray-lighter;
+    --backgroundColor: $body-bg;
+    --textColor: $text-color;
+    --linkColor: $link-color;
+    --linkHoverColor: $link-hover-color;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -18,5 +33,4 @@ body {
     color: rgb(var(--foreground-rgb));
 
     font-family: theme('fontFamily.primary');
-
 }

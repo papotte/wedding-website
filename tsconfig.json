@@ -9,6 +9,12 @@
       ],
       "@styles/*": [
         "./src/styles/*"
+      ],
+      "@pages/*": [
+        "./src/pages/*"
+      ],
+      "@hooks/*": [
+        "./src/hooks/*"
       ]
     },
     "target": "es5",

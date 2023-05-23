@@ -1,31 +1,27 @@
+import CountdownTimer from '@components/CountdownTimer';
+import Loader from '@components/Loader';
+import React, { Suspense } from 'react';
+
 const Header = () => {
+    const date = '2023-07-10T15:00:00.000Z';
+
     return (
-        <header
-            id="fh5co-header"
-            className="fh5co-cover"
-            role="banner"
-            style={{ backgroundImage: 'url(images/img_bg_2.jpg)' }}
-            data-stellar-background-ratio="0.5">
-            <div className="overlay"></div>
-            <div className="container">
-                <div className="row">
-                    <div className="col-md-8 col-md-offset-2 text-center">
-                        <div className="display-t">
-                            <div className="display-tc animate-box" data-animate-effect="fadeIn">
-                                <h1>Joefrey &amp; Sheila</h1>
-                                <h2>We Are Getting Married</h2>
-                                <div className="simply-countdown simply-countdown-one"></div>
-                                <p>
-                                    <a href="#" className="btn btn-default btn-sm">
-                                        Save the date
-                                    </a>
-                                </p>
-                            </div>
-                        </div>
+        <div className="w-full h-[900px] bg-cover bg-banner">
+            <div className="flex items-start justify-center pt-[10rem]">
+                <div className="flex justify-center">
+                    <div className="flex flex-col items-center gap-y-5">
+                        <h1>Joefrey &amp; Sheila</h1>
+                        <h3>We Are Getting Married</h3>
+                        <Suspense fallback={<Loader />}>
+                            <CountdownTimer targetDate={date} />
+                        </Suspense>
+                        <a href="#" className="btn btn-secondary">
+                            <h6>Save the date</h6>
+                        </a>
                     </div>
                 </div>
             </div>
-        </header>
+        </div>
     );
 };
 export default Header;

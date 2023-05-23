@@ -1,14 +1,12 @@
-import React from 'react';
-
-import { Metadata } from 'next';
-import { Inter } from 'next/font/google';
-
+import { inter, sacramento, workSans } from '@/app/fonts';
 import Header from '@components/Header';
+import Loader from '@components/Loader';
 import Nav from '@components/Nav';
 
 import '@styles/globals.scss';
 
-const inter = Inter({ subsets: ['latin'] });
+import { Metadata } from 'next';
+import React, { Suspense } from 'react';
 
 export const metadata: Metadata = {
     title: 'R&R Wedding',
@@ -19,14 +17,15 @@ export const metadata: Metadata = {
     },
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
-    return (
-        <html lang="en">
-            <body className={inter.className}>
-                <Nav></Nav>
-                <Header></Header>
-                {children}
-            </body>
-        </html>
-    );
-}
+const RootLayout = ({ children }: { children: React.ReactNode }) => (
+    <html lang="en" className={`${inter.variable} ${workSans.variable} ${sacramento.variable}`}>
+        <body>
+            <Nav />
+            <Header />
+            <Suspense fallback={<Loader />}>
+                <main className="container mx-auto">{children}</main>
+            </Suspense>
+        </body>
+    </html>
+);
+export default RootLayout;

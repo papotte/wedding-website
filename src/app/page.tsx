@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export default function Home() {
     return (
-        <main className="flex min-h-screen flex-col items-center justify-between p-24">
+        <div className="flex min-h-screen flex-col items-center justify-between p-24">
             <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
                 <div id="fh5co-couple">
                     <div className="container">
@@ -221,7 +221,8 @@ export default function Home() {
                         <div className="col-md-8 col-md-offset-2 text-center fh5co-heading">
                             <h2>Are You Attending?</h2>
                             <p>
-                                Please Fill-up the form to notify you that you&apos;re attending. Thanks.
+                                Please Fill-up the form to notify you that you&apos;re attending.
+                                Thanks.
                             </p>
                         </div>
                     </div>
@@ -264,6 +265,6 @@ export default function Home() {
                     </div>
                 </div>
             </div>
-        </main>
+        </div>
     );
 }

@@ -1,62 +1,25 @@
+'use client';
 import React from 'react';
+import * as NavigationMenu from '@radix-ui/react-navigation-menu';
+import Link from 'next/link';
+import styles from './Nav.module.scss';
 
 const Nav = () => {
     return (
-        <nav className="fh5co-nav" role="navigation">
-            <div className="container">
-                <div className="row">
-                    <div className="col-xs-2">
-                    </div>
-                    <div className="col-xs-10 text-right menu-1">
-                        <ul>
-                            <li className="active">
-                                <a href="index.html">Home</a>
-                            </li>
-                            <li>
-                                <a href="about.html">Story</a>
-                            </li>
-                            <li className="has-dropdown">
-                                <a href="services.html">Services</a>
-                                <ul className="dropdown">
-                                    <li>
-                                        <a href="#">Web Design</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">eCommerce</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Branding</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">API</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li className="has-dropdown">
-                                <a href="gallery.html">Gallery</a>
-                                <ul className="dropdown">
-                                    <li>
-                                        <a href="#">HTML5</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">CSS3</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Sass</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">jQuery</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="contact.html">Contact</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </nav>
+        <NavigationMenu.Root className={`${styles.NavigationMenuRoot} absolute w-full top`}>
+            <NavigationMenu.List
+                className={`${styles.NavigationMenuList} flex row justify-end gap-4 px-32 py-10`}>
+                <Link className={styles.NavigationMenuLink} href="/">
+                    Home
+                </Link>
+                <Link className={styles.NavigationMenuLink} href="/gallery">
+                    Gallery
+                </Link>
+                <Link className={styles.NavigationMenuLink} href="/rsvp">
+                    RSVP
+                </Link>
+            </NavigationMenu.List>
+        </NavigationMenu.Root>
     );
 };
 export default Nav;

@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 const colors = require('tailwindcss/colors');
+const plugin = require('tailwindcss/plugin');
 
 module.exports = {
     content: [
@@ -8,26 +9,124 @@ module.exports = {
         './src/app/**/*.{js,ts,jsx,tsx,mdx}',
     ],
     theme: {
-        colors: {
-            black: colors.black,
-            white: colors.white,
-            primary: 'darken(#428bca, 6.5%)',
-            success: '#5cb85c',
-            info: '#5bc0de',
-            warning: '#f0ad4e',
-            danger: '#d9534f',
-        },
-        fontFamily: {
-            primary: ['Graphik', 'sans-serif'],
-            secondary: ['Merriweather', 'serif'],
-        },
         extend: {
+            colors: {
+                black: colors.black,
+                white: colors.white,
+                primary: 'darken(#428bca, 6.5%)',
+                secondary: '#F14E95',
+                success: '#5cb85c',
+                info: '#5bc0de',
+                warning: '#f0ad4e',
+                danger: '#d9534f',
+            },
+            fontFamily: {
+                primary: ['var(--font-work-sans)', 'sans-serif'],
+                secondary: ['var(--font-inter)', 'sans-serif'],
+                fancy: ['var(--font-sacramento)', 'serif'],
+            },
             backgroundImage: {
-                'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-                'gradient-conic':
-                    'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+                banner: 'linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url("/images/img_bg_2.jpg")',
+            },
+            keyframes: {
+                enterFromRight: {
+                    from: { opacity: 0, transform: 'translateX(200px)' },
+                    to: { opacity: 1, transform: 'translateX(0)' },
+                },
+                enterFromLeft: {
+                    from: { opacity: 0, transform: 'translateX(-200px)' },
+                    to: { opacity: 1, transform: 'translateX(0)' },
+                },
+                exitToRight: {
+                    from: { opacity: 1, transform: 'translateX(0)' },
+                    to: { opacity: 0, transform: 'translateX(200px)' },
+                },
+                exitToLeft: {
+                    from: { opacity: 1, transform: 'translateX(0)' },
+                    to: { opacity: 0, transform: 'translateX(-200px)' },
+                },
+                scaleIn: {
+                    from: { opacity: 0, transform: 'rotateX(-10deg) scale(0.9)' },
+                    to: { opacity: 1, transform: 'rotateX(0deg) scale(1)' },
+                },
+                scaleOut: {
+                    from: { opacity: 1, transform: 'rotateX(0deg) scale(1)' },
+                    to: { opacity: 0, transform: 'rotateX(-10deg) scale(0.95)' },
+                },
+                fadeIn: {
+                    from: { opacity: 0 },
+                    to: { opacity: 1 },
+                },
+                fadeOut: {
+                    from: { opacity: 1 },
+                    to: { opacity: 0 },
+                },
+                pulse: {
+                    '0%, 100%': { transform: 'scale(1)', opacity: 1 },
+                    '50%': { transform: 'scale(1.05)', opacity: 1 },
+                },
             },
         },
+        animation: {
+            scaleIn: 'scaleIn 200ms ease',
+            scaleOut: 'scaleOut 200ms ease',
+            fadeIn: 'fadeIn 200ms ease',
+            fadeOut: 'fadeOut 200ms ease',
+            enterFromLeft: 'enterFromLeft 250ms ease',
+            enterFromRight: 'enterFromRight 250ms ease',
+            exitToLeft: 'exitToLeft 250ms ease',
+            exitToRight: 'exitToRight 250ms ease',
+            pulse: 'pulse 1s ease infinite',
+        },
     },
-    plugins: [],
+    plugins: [
+        plugin(function ({ addBase, theme }) {
+            addBase({
+                h1: {
+                    fontSize: '6rem',
+                    color: theme('colors.white'),
+                    fontFamily: theme('fontFamily.fancy'),
+                },
+                h2: {
+                    fontSize: '3.5rem',
+                    color: theme('colors.secondary'),
+                    fontFamily: theme('fontFamily.fancy'),
+                },
+                h3: {
+                    fontSize: theme('fontSize.lg'),
+                    fontFamily: theme('fontFamily.primary'),
+                },
+                h5: {
+                    fontSize: theme('fontSize.2xl'),
+                },
+                h6: {
+                    fontSize: theme('fontSize.xs'),
+                    textTransform: 'uppercase',
+                },
+            });
+        }),
+        plugin(({ matchUtilities }) => {
+            matchUtilities({
+                perspective: (value) => ({
+                    perspective: value,
+                }),
+            });
+        }),
+        plugin(function ({ addComponents, theme }) {
+            addComponents({
+                '.btn': {
+                    padding: '.5rem 1rem',
+                    borderRadius: theme('borderRadius.full'),
+                    width: 'fit-content',
+                },
+                '.btn-secondary': {
+                    backgroundColor: theme('colors.white'),
+                    color: theme('colors.secondary'),
+                    '&:hover': {
+                        backgroundColor: theme('colors.slate.200'),
+                    },
+                },
+            });
+        }),
+    ],
 };
