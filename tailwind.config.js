@@ -2,6 +2,8 @@
 const colors = require('tailwindcss/colors');
 const plugin = require('tailwindcss/plugin');
 
+const customColors = require('./colors.json');
+
 module.exports = {
     content: [
         './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
@@ -11,10 +13,9 @@ module.exports = {
     theme: {
         extend: {
             colors: {
+                ...customColors,
                 black: colors.black,
                 white: colors.white,
-                primary: 'darken(#428bca, 6.5%)',
-                secondary: '#F14E95',
                 success: '#5cb85c',
                 info: '#5bc0de',
                 warning: '#f0ad4e',
@@ -84,22 +85,26 @@ module.exports = {
             addBase({
                 h1: {
                     fontSize: '6rem',
-                    color: theme('colors.white'),
+                    color: 'inherit',
                     fontFamily: theme('fontFamily.fancy'),
                 },
                 h2: {
                     fontSize: '3.5rem',
-                    color: theme('colors.secondary'),
+                    fontWeight: 'bold',
+                    color: theme('colors.secondary.600'),
                     fontFamily: theme('fontFamily.fancy'),
                 },
                 h3: {
                     fontSize: theme('fontSize.lg'),
+                    color: 'inherit',
                     fontFamily: theme('fontFamily.primary'),
                 },
                 h5: {
+                    color: 'inherit',
                     fontSize: theme('fontSize.2xl'),
                 },
                 h6: {
+                    color: 'inherit',
                     fontSize: theme('fontSize.xs'),
                     textTransform: 'uppercase',
                 },
@@ -110,22 +115,6 @@ module.exports = {
                 perspective: (value) => ({
                     perspective: value,
                 }),
-            });
-        }),
-        plugin(function ({ addComponents, theme }) {
-            addComponents({
-                '.btn': {
-                    padding: '.5rem 1rem',
-                    borderRadius: theme('borderRadius.full'),
-                    width: 'fit-content',
-                },
-                '.btn-secondary': {
-                    backgroundColor: theme('colors.white'),
-                    color: theme('colors.secondary'),
-                    '&:hover': {
-                        backgroundColor: theme('colors.slate.200'),
-                    },
-                },
             });
         }),
     ],

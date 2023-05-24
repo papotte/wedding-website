@@ -19,7 +19,7 @@ type DateTimeProps = {
 
 const DateTimeDisplay = ({ value, type }: DateTimeProps) => {
     return (
-        <div className="flex flex-col bg-secondary/75 w-20 h-20 rounded-full justify-center animate-pulse text-center">
+        <div className="flex flex-col bg-secondary-500/75 w-20 h-20 rounded-full justify-center animate-pulse text-center">
             <h5>{value}</h5>
             <h6 className="text-white/75">{type}</h6>
         </div>

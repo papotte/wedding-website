@@ -1,16 +1,17 @@
 import { inter, sacramento, workSans } from '@/app/fonts';
 import Header from '@components/Header';
-import Loader from '@components/Loader';
 import Nav from '@components/Nav';
 
 import '@styles/globals.scss';
+import { eventData } from '@utils/eventData';
 
 import { Metadata } from 'next';
-import React, { Suspense } from 'react';
+import React from 'react';
+
+const { initials } = eventData;
 
 export const metadata: Metadata = {
-    title: 'R&R Wedding',
-    description: '07.10.2023',
+    title: initials + ' Wedding',
     icons: {
         icon: '/logo-rings.svg',
         shortcut: '/favicon.ico',
@@ -22,9 +23,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => (
         <body>
             <Nav />
             <Header />
-            <Suspense fallback={<Loader />}>
-                <main className="container mx-auto">{children}</main>
-            </Suspense>
+            <main className="container mx-auto">{children}</main>
         </body>
     </html>
 );

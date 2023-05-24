@@ -2,35 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
-@import "variables.scss";
 
 :root {
-    --foreground-rgb: 0, 0, 0;
-    --primaryColor: theme('colors.primary');
-    --successColor: theme('colors.success');
-    --infoColor: theme('colors.info');
-    --warningColor: theme('colors.warning');
-    --dangerColor: theme('colors.danger');
-    --grayBase: $gray-base;
-    --grayDarker: $gray-darker;
-    --grayDark: $gray-dark;
-    --gray: $gray;
-    --grayLight: $gray-light;
-    --grayLighter: $gray-lighter;
-    --backgroundColor: $body-bg;
-    --textColor: $text-color;
-    --linkColor: $link-color;
-    --linkHoverColor: $link-hover-color;
-}
+    --color-primary: theme('colors.primary.900');
+    --color-secondary: theme('colors.secondary.900');
+    --color-tertiary: theme('colors.tertiary.400');
+    --color-accent: theme('colors.accent.700');
+    --color-white: theme('colors.white');
+    --color-black: theme('colors.black');
+    --color-success: theme('colors.success');
+    --color-info: theme('colors.info');
+    --color-warning: theme('colors.warning');
+    --color-danger: theme('colors.danger');
+    --color-background: theme('colors.background.400');
+    --color-background-alt: theme('colors.background-alt.400');
 
-@media (prefers-color-scheme: dark) {
-    :root {
-        --foreground-rgb: 255, 255, 255;
-    }
+    --button-background: theme('colors.background.100');
+    --button-background-hover: theme('colors.background.200');
+    --button-color: theme('colors.secondary.500');
+    --button-color-hover: theme('colors.secondary.700');
+
+    --font-size-xs: theme('fontSize.xs');
+
+    --foreground-rgb: 0, 0, 0;
 }
 
 body {
-    color: rgb(var(--foreground-rgb));
+    color: theme('colors.white');
 
     font-family: theme('fontFamily.primary');
 }
+
