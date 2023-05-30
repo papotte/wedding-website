@@ -9,8 +9,8 @@ const Header = () => {
     const { title, date } = eventData;
 
     return (
-        <div className="w-full page bg-cover bg-banner py-[10rem]">
-            <div className="flex-col items-center gap-y-5">
+        <div className="hero bg-banner bg-cover py-[10rem]">
+            <div className="hero-content text-center flex-col">
                 <h1>{title}</h1>
                 <h3>We Are Getting Married</h3>
                 <Suspense fallback={<Loader />}>

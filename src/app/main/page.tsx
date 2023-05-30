@@ -12,7 +12,7 @@ const Main = () => {
         year: 'numeric',
     });
     return (
-        <div className="page w-3/4 text-black gap-14 text-center">
+        <div className="page text-black gap-14 text-center">
             <div className="flex flex-col gap-3">
                 <h2>Hello!</h2>
                 <h3>

@@ -87,6 +87,7 @@ module.exports = {
         },
     },
     plugins: [
+        require('daisyui'),
         plugin(function ({ addBase, theme }) {
             addBase({
                 h1: {
@@ -129,21 +130,9 @@ module.exports = {
                 }),
             });
         }),
-        plugin(function ({ addComponents, theme }) {
-            addComponents({
-                '.btn': {
-                    padding: '.5rem 1rem',
-                    borderRadius: theme('borderRadius.full'),
-                    width: 'fit-content',
-                },
-                '.btn-secondary': {
-                    backgroundColor: theme('colors.white'),
-                    color: theme('colors.secondary'),
-                    '&:hover': {
-                        backgroundColor: theme('colors.slate.200'),
-                    },
-                },
-            });
-        }),
     ],
+    daisyui: {
+        styled: true,
+        themes: false,
+    },
 };

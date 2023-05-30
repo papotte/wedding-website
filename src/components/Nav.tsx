@@ -1,29 +1,42 @@
 'use client';
-import React from 'react';
-import * as NavigationMenu from '@radix-ui/react-navigation-menu';
 import Link from 'next/link';
+import React from 'react';
 import styles from './Nav.module.scss';
+
+const NavigationItems = [
+    {
+        name: 'Home',
+        link: '/',
+    },
+    {
+        name: 'Event',
+        link: '/event',
+    },
+    {
+        name: 'Gallery',
+        link: '/gallery',
+    },
+    {
+        name: 'RSVP',
+        link: '/rsvp',
+    },
+];
+
+const links = NavigationItems.map((item, index) => {
+    return (
+        <li key={index} className={styles.NavigationMenuLink}>
+            <Link href={item.link}>{item.name}</Link>
+        </li>
+    );
+});
 
 const Nav = () => {
     return (
-        <NavigationMenu.Root
-            className={`${styles.NavigationMenuRoot} absolute w-fit top-0 right-0`}>
-            <NavigationMenu.List
-                className={`${styles.NavigationMenuList} flex row justify-end gap-4 px-32 py-10`}>
-                <Link className={styles.NavigationMenuLink} href="/">
-                    Home
-                </Link>
-                <Link className={styles.NavigationMenuLink} href="/event">
-                    Event
-                </Link>
-                <Link className={styles.NavigationMenuLink} href="/gallery">
-                    Gallery
-                </Link>
-                <Link className={styles.NavigationMenuLink} href="/rsvp">
-                    RSVP
-                </Link>
-            </NavigationMenu.List>
-        </NavigationMenu.Root>
+        <div className={`navbar absolute`}>
+            <div className="navbar-end flex-1">
+                <ul className="menu menu-horizontal px-1">{...links}</ul>
+            </div>
+        </div>
     );
 };
 export default Nav;
