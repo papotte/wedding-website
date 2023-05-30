@@ -4,6 +4,17 @@ const plugin = require('tailwindcss/plugin');
 
 const customColors = require('./colors.json');
 
+const daisyUiColors = {
+    primary: customColors.primary.DEFAULT,
+    secondary: customColors.secondary.DEFAULT,
+    accent: customColors.accent.DEFAULT,
+    neutral: customColors.neutral,
+    'base-content': customColors.neutral,
+    info: customColors.info,
+    success: customColors.success,
+    warning: customColors.warning,
+    error: customColors.error,
+};
 module.exports = {
     content: [
         './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
@@ -16,10 +27,6 @@ module.exports = {
                 ...customColors,
                 black: colors.black,
                 white: colors.white,
-                success: '#5cb85c',
-                info: '#5bc0de',
-                warning: '#f0ad4e',
-                danger: '#d9534f',
             },
             fontFamily: {
                 primary: ['var(--font-work-sans)', 'sans-serif'],
@@ -29,6 +36,7 @@ module.exports = {
             backgroundImage: {
                 banner: 'linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url("/images/img_bg_2.jpg")',
                 event: 'linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url("/images/img_bg_3.jpg")',
+                rsvp: 'linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url("/images/img_bg_4.jpg")',
             },
             keyframes: {
                 enterFromRight: {
@@ -86,6 +94,7 @@ module.exports = {
             pulse: 'pulse 1s ease infinite',
         },
     },
+
     plugins: [
         require('daisyui'),
         plugin(function ({ addBase, theme }) {
@@ -98,7 +107,7 @@ module.exports = {
                 h2: {
                     fontSize: '3.5rem',
                     fontWeight: 'bold',
-                    color: theme('colors.secondary.600'),
+                    color: 'inherit',
                     fontFamily: theme('fontFamily.fancy'),
                 },
                 h3: {
@@ -107,7 +116,7 @@ module.exports = {
                     fontFamily: theme('fontFamily.primary'),
                 },
                 h5: {
-                    color: theme('colors.secondary.600'),
+                    color: 'inherit',
                     fontFamily: theme('fontFamily.fancy'),
                     fontSize: theme('fontSize.3xl'),
                 },
@@ -117,7 +126,7 @@ module.exports = {
                     textTransform: 'uppercase',
                 },
                 legend: {
-                    color: theme('colors.gray.500'),
+                    color: 'inherit',
                     fontSize: theme('fontSize.base'),
                     fontWeight: '300',
                 },
@@ -133,6 +142,21 @@ module.exports = {
     ],
     daisyui: {
         styled: true,
-        themes: false,
+        themes: [
+            {
+                default: {
+                    ...daisyUiColors,
+                    'base-100': colors.white,
+                },
+            },
+            {
+                alt: {
+                    ...daisyUiColors,
+                    neutral: colors.white,
+                    'base-content': colors.white,
+                    'base-100': colors.white,
+                },
+            },
+        ],
     },
 };

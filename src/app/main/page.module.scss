@@ -1,18 +1,32 @@
 .coupleWrap {
+    @apply grid md:flex;
+
+    img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+    }
 
     .spouse {
-        flex: 1;
-        flex-direction: row;
+        @apply md:flex md:flex-row md:flex-1 items-center;
 
+        img {
+            @apply md:hidden;
+        }
 
+        .desc {
+            @apply text-center items-center md:text-right md:items-end flex flex-col gap-3
+        }
+
+        &:last-child {
+            .desc {
+                @apply md:text-left md:items-start;
+            }
+        }
     }
 
     .pictures {
-        img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-        }
+        @apply flex-row items-center hidden md:flex;
 
         .heart {
             color: theme('colors.secondary.500');
@@ -21,5 +35,9 @@
             margin: -20px;
             background: theme('colors.white');
         }
+    }
+
+    h5 {
+        @apply text-secondary;
     }
 }

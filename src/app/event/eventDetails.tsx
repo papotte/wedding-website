@@ -23,7 +23,7 @@ const EventDetails = () => {
     ];
 
     return (
-        <div className="pt-16 row w-3/4 lg:w-2/3 gap-8">
+        <div className={styles.events}>
             {events.map((event, index) => (
                 <div key={index} className={styles.eventBox}>
                     <h3>{event.name}</h3>

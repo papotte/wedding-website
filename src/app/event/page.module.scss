@@ -19,3 +19,7 @@
         @apply text-white text-center;
     }
 }
+
+.events {
+    @apply pt-16 w-3/4 lg:w-2/3 gap-8 grid md:grid-cols-2;
+}
