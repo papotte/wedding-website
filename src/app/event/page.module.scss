@@ -1,0 +1,21 @@
+.eventBox {
+    @apply animate-fadeInUp flex flex-col gap-4 box-border box-content border-2 p-8 border-white/50 bg-white/20;
+
+    h3 {
+        @apply text-xl text-white uppercase border-b-2 border-white/50 pb-5 text-center;
+    }
+
+    .details {
+        @apply grid grid-cols-2 items-center ;
+        div {
+            @apply flex flex-col gap-1 items-center;
+            svg {
+                @apply w-6 h-6;
+            }
+        }
+    }
+
+    .description {
+        @apply text-white text-center;
+    }
+}

@@ -6,7 +6,7 @@ import '@styles/globals.scss';
 import { eventData } from '@utils/eventData';
 
 import { Metadata } from 'next';
-import React from 'react';
+import React, { PropsWithChildren } from 'react';
 
 const { initials } = eventData;
 
@@ -18,12 +18,25 @@ export const metadata: Metadata = {
     },
 };
 
-const RootLayout = ({ children }: { children: React.ReactNode }) => (
-    <html lang="en" className={`${inter.variable} ${workSans.variable} ${sacramento.variable}`}>
+export async function generateStaticParams() {
+    return [{ lang: 'en' }, { lang: 'es' }];
+}
+
+type RootProps = {
+    params: {
+        lang: string;
+    };
+};
+const RootLayout = ({ children, params }: PropsWithChildren<RootProps>) => (
+    <html
+        lang={params.lang}
+        className={`${inter.variable} ${workSans.variable} ${sacramento.variable}`}>
         <body>
             <Nav />
-            <Header />
-            <main className="container mx-auto">{children}</main>
+            <div className="w-full flex flex-col items-center justify-between">
+                <Header />
+                {children}
+            </div>
         </body>
     </html>
 );

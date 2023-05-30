@@ -8,15 +8,14 @@
 
 .NavigationMenuTrigger,
 .NavigationMenuLink {
+    @apply text-sm text-white;
     text-transform: uppercase;
-    font-size: 0.75rem;
 
     font-family: theme('fontFamily.primary');
 
     text-decoration: none;
     outline: none;
     user-select: none;
-    color: var(--white);
     opacity: 0.5;
 }
 

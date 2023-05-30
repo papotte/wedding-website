@@ -1,131 +1,13 @@
-import Image from 'next/image';
+import { Fragment } from 'react';
+import MainPage from '@/app/main/page';
+import EventPage from '@/app/event/page';
 
 export default function Home() {
     return (
-        <div className="w-full flex flex-col items-center justify-between">
-            <div className="flex items-start justify-center text-black">
-                <div id="fh5co-couple">
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
-                                <h2>Hello!</h2>
-                                <h3>November 28th, 2016 New York, USA</h3>
-                                <p>We invited you to celebrate our wedding</p>
-                            </div>
-                        </div>
-                        <div className="couple-wrap animate-box">
-                            <div className="couple-half">
-                                <div className="groom">
-                                    <Image
-                                        src="/images/groom.jpg"
-                                        alt="groom"
-                                        className="img-responsive"
-                                        width={150}
-                                        height={150}
-                                    />
-                                </div>
-                                <div className="desc-groom">
-                                    <h3>Joefrey Mahusay</h3>
-                                    <p>
-                                        Far far away, behind the word mountains, far from the
-                                        countries Vokalia and Consonantia, there live the blind
-                                        texts. Separated they live in Bookmarksgrove
-                                    </p>
-                                </div>
-                            </div>
-                            <p className="heart text-center">
-                                <i className="icon-heart2"></i>
-                            </p>
-                            <div className="couple-half">
-                                <div className="bride">
-                                    <Image
-                                        src="/images/bride.jpg"
-                                        alt="groom"
-                                        className="img-responsive"
-                                        width={150}
-                                        height={150}
-                                    />
-                                </div>
-                                <div className="desc-bride">
-                                    <h3>Sheila Mahusay</h3>
-                                    <p>
-                                        Far far away, behind the word mountains, far from the
-                                        countries Vokalia and Consonantia, there live the blind
-                                        texts. Separated they live in Bookmarksgrove
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <Fragment>
+            <MainPage />
+            <EventPage />
 
-            <div
-                id="fh5co-event"
-                className="fh5co-bg"
-                style={{ backgroundImage: 'url(images/img_bg_3.jpg)' }}>
-                <div className="overlay"></div>
-                <div className="container">
-                    <div className="row">
-                        <div className="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
-                            <span>Our Special Events</span>
-                            <h2>Wedding Events</h2>
-                        </div>
-                    </div>
-                    <div className="row">
-                        <div className="display-t">
-                            <div className="display-tc">
-                                <div className="col-md-10 col-md-offset-1">
-                                    <div className="col-md-6 col-sm-6 text-center">
-                                        <div className="event-wrap animate-box">
-                                            <h3>Main Ceremony</h3>
-                                            <div className="event-col">
-                                                <i className="icon-clock"></i>
-                                                <span>4:00 PM</span>
-                                                <span>6:00 PM</span>
-                                            </div>
-                                            <div className="event-col">
-                                                <i className="icon-calendar"></i>
-                                                <span>Monday 28</span>
-                                                <span>November, 2016</span>
-                                            </div>
-                                            <p>
-                                                Far far away, behind the word mountains, far from
-                                                the countries Vokalia and Consonantia, there live
-                                                the blind texts. Separated they live in
-                                                Bookmarksgrove right at the coast of the Semantics,
-                                                a large language ocean.
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div className="col-md-6 col-sm-6 text-center">
-                                        <div className="event-wrap animate-box">
-                                            <h3>Wedding Party</h3>
-                                            <div className="event-col">
-                                                <i className="icon-clock"></i>
-                                                <span>7:00 PM</span>
-                                                <span>12:00 AM</span>
-                                            </div>
-                                            <div className="event-col">
-                                                <i className="icon-calendar"></i>
-                                                <span>Monday 28</span>
-                                                <span>November, 2016</span>
-                                            </div>
-                                            <p>
-                                                Far far away, behind the word mountains, far from
-                                                the countries Vokalia and Consonantia, there live
-                                                the blind texts. Separated they live in
-                                                Bookmarksgrove right at the coast of the Semantics,
-                                                a large language ocean.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
             <div id="fh5co-couple-story">
                 <div className="container">
@@ -265,6 +147,6 @@ export default function Home() {
                     </div>
                 </div>
             </div>
-        </div>
+        </Fragment>
     );
 }

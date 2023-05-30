@@ -1,0 +1,25 @@
+.coupleWrap {
+
+    .spouse {
+        flex: 1;
+        flex-direction: row;
+
+
+    }
+
+    .pictures {
+        img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+        }
+
+        .heart {
+            color: theme('colors.secondary.500');
+            border-radius: 50%;
+            padding: 20px;
+            margin: -20px;
+            background: theme('colors.white');
+        }
+    }
+}

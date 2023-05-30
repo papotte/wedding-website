@@ -22,14 +22,21 @@
     --button-color: theme('colors.secondary.500');
     --button-color-hover: theme('colors.secondary.700');
 
-    --font-size-xs: theme('fontSize.xs');
-
     --foreground-rgb: 0, 0, 0;
 }
 
-body {
-    color: theme('colors.white');
+@layer base {
+    body {
+        color: theme('colors.white');
 
-    font-family: theme('fontFamily.primary');
+        font-family: theme('fontFamily.primary');
+    }
+
+    div {
+        @apply flex;
+    }
+
+    .page {
+        @apply py-12 md:py-24 flex flex-col items-center mx-auto
+    }
 }
-

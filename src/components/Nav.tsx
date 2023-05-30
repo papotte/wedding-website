@@ -6,11 +6,15 @@ import styles from './Nav.module.scss';
 
 const Nav = () => {
     return (
-        <NavigationMenu.Root className={`${styles.NavigationMenuRoot} absolute w-full top`}>
+        <NavigationMenu.Root
+            className={`${styles.NavigationMenuRoot} absolute w-fit top-0 right-0`}>
             <NavigationMenu.List
                 className={`${styles.NavigationMenuList} flex row justify-end gap-4 px-32 py-10`}>
                 <Link className={styles.NavigationMenuLink} href="/">
                     Home
+                </Link>
+                <Link className={styles.NavigationMenuLink} href="/event">
+                    Event
                 </Link>
                 <Link className={styles.NavigationMenuLink} href="/gallery">
                     Gallery

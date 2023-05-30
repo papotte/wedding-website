@@ -1,8 +1,9 @@
+import { parseISO } from 'date-fns';
 import { useEffect, useState } from 'react';
 
 export type Countdown = [number, number, number, number];
 const useCountdown = (targetDate: string) => {
-    const countDownDate = new Date(targetDate).getTime();
+    const countDownDate = parseISO(targetDate).getTime();
 
     const [countDown, setCountDown] = useState(countDownDate - new Date().getTime());
 

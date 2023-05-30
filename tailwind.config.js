@@ -28,6 +28,7 @@ module.exports = {
             },
             backgroundImage: {
                 banner: 'linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url("/images/img_bg_2.jpg")',
+                event: 'linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url("/images/img_bg_3.jpg")',
             },
             keyframes: {
                 enterFromRight: {
@@ -62,6 +63,10 @@ module.exports = {
                     from: { opacity: 1 },
                     to: { opacity: 0 },
                 },
+                fadeInUp: {
+                    from: { opacity: 0, transform: 'translateY(100px)' },
+                    to: { opacity: 1, transform: 'translateY(0)' },
+                },
                 pulse: {
                     '0%, 100%': { transform: 'scale(1)', opacity: 1 },
                     '50%': { transform: 'scale(1.05)', opacity: 1 },
@@ -73,6 +78,7 @@ module.exports = {
             scaleOut: 'scaleOut 200ms ease',
             fadeIn: 'fadeIn 200ms ease',
             fadeOut: 'fadeOut 200ms ease',
+            fadeInUp: 'fadeInUp 200ms ease',
             enterFromLeft: 'enterFromLeft 250ms ease',
             enterFromRight: 'enterFromRight 250ms ease',
             exitToLeft: 'exitToLeft 250ms ease',
@@ -95,18 +101,24 @@ module.exports = {
                     fontFamily: theme('fontFamily.fancy'),
                 },
                 h3: {
-                    fontSize: theme('fontSize.lg'),
+                    fontSize: theme('fontSize.2xl'),
                     color: 'inherit',
                     fontFamily: theme('fontFamily.primary'),
                 },
                 h5: {
-                    color: 'inherit',
-                    fontSize: theme('fontSize.2xl'),
+                    color: theme('colors.secondary.600'),
+                    fontFamily: theme('fontFamily.fancy'),
+                    fontSize: theme('fontSize.3xl'),
                 },
                 h6: {
                     color: 'inherit',
                     fontSize: theme('fontSize.xs'),
                     textTransform: 'uppercase',
+                },
+                legend: {
+                    color: theme('colors.gray.500'),
+                    fontSize: theme('fontSize.base'),
+                    fontWeight: '300',
                 },
             });
         }),
@@ -115,6 +127,22 @@ module.exports = {
                 perspective: (value) => ({
                     perspective: value,
                 }),
+            });
+        }),
+        plugin(function ({ addComponents, theme }) {
+            addComponents({
+                '.btn': {
+                    padding: '.5rem 1rem',
+                    borderRadius: theme('borderRadius.full'),
+                    width: 'fit-content',
+                },
+                '.btn-secondary': {
+                    backgroundColor: theme('colors.white'),
+                    color: theme('colors.secondary'),
+                    '&:hover': {
+                        backgroundColor: theme('colors.slate.200'),
+                    },
+                },
             });
         }),
     ],
