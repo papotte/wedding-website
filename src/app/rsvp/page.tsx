@@ -6,13 +6,17 @@ export default function RSVP() {
                 <p className="text-white/50">
                     Please fill-up the form to notify you that you&apos;re attending. Thanks.
                 </p>
-                <form className="flex flex-col md:flex-row gap-8 items-end">
+                <form
+                    className="flex flex-col md:flex-row gap-8 items-end"
+                    name="rsvp"
+                    data-netlify="true">
                     <div className="form-control">
                         <label className="label">
                             <span className="label-text">Full name</span>
                         </label>
                         <input
                             type="text"
+                            name="name"
                             placeholder="Name"
                             className="input input-bordered w-full max-w-xs"
                         />
@@ -23,11 +27,14 @@ export default function RSVP() {
                         </label>
                         <input
                             type="text"
+                            name="email"
                             placeholder="Email"
                             className="input input-bordered w-full max-w-xs"
                         />
                     </div>
-                    <button className="btn btn-accent">I am attending</button>
+                    <button className="btn btn-accent" type="submit">
+                        I am attending
+                    </button>
                 </form>
             </div>
         </div>

@@ -1,0 +1,18 @@
+.wrapper {
+    @apply bg-center w-full;
+
+    .page {
+    }
+
+    .photoGrid {
+        @apply grid grid-cols-1 md:grid-cols-3 gap-6;
+
+        .photo {
+            @apply aspect-square;
+
+            img {
+                @apply object-cover object-center rounded-xl;
+            }
+        }
+    }
+}
