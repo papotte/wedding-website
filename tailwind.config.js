@@ -74,7 +74,7 @@ module.exports = {
                     from: { opacity: 0, transform: 'translateY(100px)' },
                     to: { opacity: 1, transform: 'translateY(0)' },
                 },
-                pulse: {
+                beat: {
                     '0%, 100%': { transform: 'scale(1)', opacity: 1 },
                     '50%': { transform: 'scale(1.05)', opacity: 1 },
                 },
@@ -90,10 +90,10 @@ module.exports = {
             enterFromRight: 'enterFromRight 250ms ease',
             exitToLeft: 'exitToLeft 250ms ease',
             exitToRight: 'exitToRight 250ms ease',
+            beat: 'beat 1s ease infinite',
             pulse: 'pulse 1s ease infinite',
         },
     },
-
     plugins: [
         require('daisyui'),
         plugin(function ({ addBase, theme }) {

@@ -1,23 +1,27 @@
 'use client';
 import { CalendarIcon, ClockIcon } from '@radix-ui/react-icons';
 
-import styles from '@/app/event/page.module.scss';
-import { useFormattedDates } from '@hooks/useFormattedDates';
-import { eventData } from '@utils/eventData';
+import Loader from '@components/Loader';
+import { useEventData } from '@hooks/useEventData';
+
+import styles from './page.module.scss';
 
 const EventDetails = () => {
-    const { ceremony, party } = eventData.events;
+    const { data } = useEventData();
 
+    if (!data) return <Loader />;
+
+    const { ceremony, party } = data.events;
     const events = [
         {
             name: 'Ceremony',
-            ...useFormattedDates(ceremony.start, ceremony.end),
+            ...ceremony.formatted,
             description:
                 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.',
         },
         {
             name: 'Wedding Party',
-            ...useFormattedDates(party.start, party.end),
+            ...party.formatted,
             description:
                 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.',
         },
@@ -36,8 +40,8 @@ const EventDetails = () => {
                         </div>
                         <div className={styles.date}>
                             <CalendarIcon />
-                            <span>{event.startDayMonth}</span>
-                            <span>{event.startMonthYear}</span>
+                            <span>{event.dayMonth}</span>
+                            <span>{event.monthYear}</span>
                         </div>
                     </div>
 

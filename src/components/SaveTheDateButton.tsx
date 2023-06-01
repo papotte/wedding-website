@@ -4,8 +4,9 @@ import React from 'react';
 
 import { AddToCalendarButton } from 'add-to-calendar-button-react';
 
-import { useFormattedDates } from '@hooks/useFormattedDates';
-import { eventData } from '@utils/eventData';
+import Loader from '@components/Loader';
+import { useEventData } from '@hooks/useEventData';
+
 
 const styleVars: string[] = [
     '--btn-background: var(--button-background)',
@@ -18,8 +19,12 @@ const styleVars: string[] = [
 ];
 
 const SaveTheDateButton = () => {
-    const { title, location, events } = eventData;
-    const formattedDates = useFormattedDates(events.ceremony.start, events.party.end);
+    const { data, error } = useEventData();
+
+    if (error) return <div>Failed to load</div>;
+    if (!data) return <Loader />;
+
+    const { title, location, formattedDates } = data;
     return (
         <AddToCalendarButton
             styleLight={styleVars.join(';')}

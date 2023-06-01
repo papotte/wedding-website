@@ -1,4 +1,3 @@
-import { EventDetails } from '@models/EventDetails';
 import { LocationDetails } from '@models/LocationData';
 
 export interface EventData {
@@ -6,7 +5,6 @@ export interface EventData {
     title: string;
     initials: string;
     date: string;
-    events: EventDetails;
     location: LocationDetails;
     email?: string;
 }

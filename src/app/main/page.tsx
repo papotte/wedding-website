@@ -1,23 +1,16 @@
 import { HeartFilledIcon } from '@radix-ui/react-icons';
 import Image from 'next/image';
 
-import { eventData } from '@utils/eventData';
-
+import EventDetails from './eventDetails';
 import styles from './page.module.scss';
 
 const Main = () => {
-    const date = new Date(eventData.date);
-    const formattedDate = date.toLocaleDateString('en-US', {
-        month: 'long',
-        day: 'numeric',
-        year: 'numeric',
-    });
     return (
         <div className="page gap-14 text-center">
             <div className="flex flex-col gap-3">
                 <h2 className="text-secondary">Hello!</h2>
                 <h3 className="text-black">
-                    {formattedDate} - {eventData.location.city}
+                    <EventDetails />
                 </h3>
                 <p className="text-gray-500">We invite you to celebrate our wedding</p>
             </div>

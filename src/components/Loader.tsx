@@ -1,6 +1,4 @@
 import React from 'react';
 
-import styles from './Loader.module.scss';
-
-const Loader = () => <div className={styles.pageLoader}></div>;
+const Loader = () => <progress className="progress w-50 animate-pulse"></progress>;
 export default Loader;

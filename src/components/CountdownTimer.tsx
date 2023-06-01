@@ -20,7 +20,7 @@ type DateTimeProps = {
 
 const DateTimeDisplay = ({ value, type }: DateTimeProps) => {
     return (
-        <div className="flex flex-col bg-accent-900 w-16 h-16 md:w-20 md:h-20 rounded-full justify-center animate-pulse text-center text-white/75">
+        <div className="flex flex-col bg-accent-900 w-16 h-16 md:w-20 md:h-20 rounded-full justify-center animate-beat text-center text-white/75">
             <h6 className="text-2xl md:text-3xl">{value}</h6>
             <h6>{type}</h6>
         </div>
@@ -47,6 +47,7 @@ const ShowCounter = ({ days, hours, minutes, seconds }: CounterProps) => {
 type Props = {
     targetDate: string;
 };
+
 const CountdownTimer = ({ targetDate }: Props) => {
     const [days, hours, minutes, seconds] = useCountdown(targetDate);
 

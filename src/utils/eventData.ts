@@ -1,26 +1,7 @@
-import { addHours, parseISO } from 'date-fns';
-
 import { EventData } from '@models/EventData';
 
-let generateEvents = (strDate: string) => {
-    const date: Date = parseISO(strDate);
-
-    return {
-        date: strDate,
-        events: {
-            ceremony: {
-                start: date,
-                end: addHours(date, 2),
-            },
-            party: {
-                start: addHours(date, 3),
-                end: addHours(date, 10),
-            },
-        },
-    };
-};
-let defaultNames = ['Jeofrey', 'Sheila'];
-let defaultDate = '2021-10-10';
+const defaultNames = ['Jeofrey', 'Sheila'];
+export const defaultDate = '2021-10-10';
 export const defaultData = {
     names: defaultNames,
     location: {
@@ -39,7 +20,7 @@ export const eventData: EventData = {
     names,
     initials: names.map((n) => n.at(0)).join('&'),
     title: names.join(' & '),
-    ...generateEvents(date),
+    date,
     email: process.env.NEXT_PUBLIC_EMAIL,
     location: {
         name: process.env.NEXT_PUBLIC_EVENT_LOCATION_NAME ?? defaultData.location.name,
