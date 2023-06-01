@@ -1,9 +1,11 @@
 'use client';
 
+import React from 'react';
+
+import { AddToCalendarButton } from 'add-to-calendar-button-react';
+
 import { useFormattedDates } from '@hooks/useFormattedDates';
 import { eventData } from '@utils/eventData';
-import { AddToCalendarButton } from 'add-to-calendar-button-react';
-import React from 'react';
 
 const styleVars: string[] = [
     '--btn-background: var(--button-background)',

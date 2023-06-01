@@ -1,6 +1,8 @@
-import { FormattedDates } from '@models/FormattedDates';
-import { format } from 'date-fns';
 import { useEffect, useState } from 'react';
+
+import { format } from 'date-fns';
+
+import { FormattedDates } from '@models/FormattedDates';
 
 const formatDate = (date: Date) => {
     return format(date, 'yyyy-MM-dd');
@@ -26,7 +28,7 @@ export const useFormattedDates = (start: Date, end: Date) => {
 
     useEffect(() => {
         setFormatted(formatDates(start, end));
-    }, [start, end, formatDates]);
+    }, [start, end]);
 
     return formatted;
 };

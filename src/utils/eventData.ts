@@ -1,5 +1,6 @@
-import { EventData } from '@models/EventData';
 import { addHours, parseISO } from 'date-fns';
+
+import { EventData } from '@models/EventData';
 
 let generateEvents = (strDate: string) => {
     const date: Date = parseISO(strDate);

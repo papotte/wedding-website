@@ -29,12 +29,12 @@ module.exports = {
                 white: colors.white,
             },
             fontFamily: {
-                primary: ['var(--font-work-sans)', 'sans-serif'],
+                primary: ['var(--font-montserrat)', 'sans-serif'],
                 secondary: ['var(--font-inter)', 'sans-serif'],
-                fancy: ['var(--font-sacramento)', 'serif'],
+                fancy: ['var(--font-better-saturday)', 'serif'],
             },
             backgroundImage: {
-                banner: 'linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url("/images/img_bg_2.jpg")',
+                banner: 'linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.3)), url("/images/background_1.png")',
                 event: 'linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url("/images/img_bg_3.jpg")',
                 rsvp: 'linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url("/images/img_bg_4.jpg")',
             },

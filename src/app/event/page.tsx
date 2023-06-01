@@ -1,6 +1,7 @@
+import { Suspense } from 'react';
+
 import EventDetails from '@/app/event/eventDetails';
 import Loader from '@components/Loader';
-import { Suspense } from 'react';
 
 const Event = () => {
     return (

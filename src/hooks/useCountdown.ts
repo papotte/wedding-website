@@ -1,5 +1,6 @@
-import { parseISO } from 'date-fns';
 import { useEffect, useState } from 'react';
+
+import { parseISO } from 'date-fns';
 
 export type Countdown = [number, number, number, number];
 const useCountdown = (targetDate: string) => {

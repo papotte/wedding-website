@@ -1,6 +1,8 @@
 'use client';
-import Link from 'next/link';
 import React from 'react';
+
+import Link from 'next/link';
+
 import styles from './Nav.module.scss';
 
 const NavigationItems = [

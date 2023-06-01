@@ -1,7 +1,8 @@
 'use client';
+import { CalendarIcon, ClockIcon } from '@radix-ui/react-icons';
+
 import styles from '@/app/event/page.module.scss';
 import { useFormattedDates } from '@hooks/useFormattedDates';
-import { CalendarIcon, ClockIcon } from '@radix-ui/react-icons';
 import { eventData } from '@utils/eventData';
 
 const EventDetails = () => {

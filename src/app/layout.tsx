@@ -1,12 +1,12 @@
-import { inter, sacramento, workSans } from '@/app/fonts';
-import Header from '@components/Header';
-import Nav from '@components/Nav';
-
-import '@styles/globals.scss';
-import { eventData } from '@utils/eventData';
+import React, { PropsWithChildren } from 'react';
 
 import { Metadata } from 'next';
-import React, { PropsWithChildren } from 'react';
+
+import { betterSaturday, inter, montserrat, sacramento, workSans } from '@/app/fonts';
+import Header from '@components/Header';
+import Nav from '@components/Nav';
+import '@styles/globals.scss';
+import { eventData } from '@utils/eventData';
 
 const { initials } = eventData;
 
@@ -30,7 +30,7 @@ type RootProps = {
 const RootLayout = ({ children, params }: PropsWithChildren<RootProps>) => (
     <html
         lang={params.lang}
-        className={`${inter.variable} ${workSans.variable} ${sacramento.variable}`}>
+        className={`${inter.variable} ${workSans.variable} ${sacramento.variable} ${montserrat.variable} ${betterSaturday.variable}`}>
         <body>
             <Nav />
             <div className="w-full flex flex-col items-center justify-between">
