@@ -16,14 +16,14 @@ export default function Home() {
                 <Fragment>
                     <MainPage />
                     <EventPage />
+                    {showGallery ? (
+                        <Suspense fallback={<Loader />}>
+                            <Gallery />
+                        </Suspense>
+                    ) : (
+                        <RSVPPage />
+                    )}
                 </Fragment>
-            )}
-            {showGallery ? (
-                <Suspense fallback={<Loader />}>
-                    <Gallery />
-                </Suspense>
-            ) : (
-                <RSVPPage />
             )}
         </Fragment>
     );

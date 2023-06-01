@@ -13,7 +13,7 @@ const Header = () => {
     const eventHasPassed: boolean = process.env.eventHasPassed === 'true';
 
     return (
-        <div className="hero bg-banner bg-cover bg-bottom py-[10rem]" data-theme="alt">
+        <div className="hero bg-banner md:bg-cover bg-bottom py-[10rem]" data-theme="alt">
             <div className="hero-content text-center flex-col">
                 <h1>{title}</h1>
                 <h3>We are getting married on </h3>

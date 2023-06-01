@@ -9,7 +9,11 @@ export default function RSVP() {
                 <form
                     className="flex flex-col md:flex-row gap-8 items-end"
                     name="rsvp"
+                    action="/success"
+                    method="POST"
                     data-netlify="true">
+                    <input type="hidden" name="form-name" value="rsvp" />
+
                     <div className="form-control">
                         <label className="label">
                             <span className="label-text">Full name</span>

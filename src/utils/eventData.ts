@@ -40,6 +40,7 @@ export const eventData: EventData = {
     initials: names.map((n) => n.at(0)).join('&'),
     title: names.join(' & '),
     ...generateEvents(date),
+    email: process.env.NEXT_PUBLIC_EMAIL,
     location: {
         name: process.env.NEXT_PUBLIC_EVENT_LOCATION_NAME ?? defaultData.location.name,
         city: process.env.NEXT_PUBLIC_EVENT_LOCATION_CITY ?? defaultData.location.city,

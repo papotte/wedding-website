@@ -9,7 +9,6 @@ const daisyUiColors = {
     secondary: customColors.secondary.DEFAULT,
     accent: customColors.accent.DEFAULT,
     neutral: customColors.neutral,
-    'base-content': customColors.neutral,
     info: customColors.info,
     success: customColors.success,
     warning: customColors.warning,
@@ -153,8 +152,8 @@ module.exports = {
                 alt: {
                     ...daisyUiColors,
                     neutral: colors.white,
+                    'base-100': customColors.primary.DEFAULT,
                     'base-content': colors.white,
-                    'base-100': colors.white,
                 },
             },
         ],

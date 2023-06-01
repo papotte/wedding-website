@@ -8,4 +8,5 @@ export interface EventData {
     date: string;
     events: EventDetails;
     location: LocationDetails;
+    email?: string;
 }
