@@ -4,6 +4,12 @@
       "@/*": [
         "./src/*"
       ],
+      "@app/*": [
+        "./src/app/[lang]/*"
+      ],
+      "@i18n": [
+        "./i18n/index.ts",
+      ],
       "@components/*": [
         "./src/components/*"
       ],

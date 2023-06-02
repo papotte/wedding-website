@@ -1,9 +1,9 @@
 import React, { Fragment, Suspense } from 'react';
 
-import EventPage from '@/app/event/page';
-import Gallery from '@/app/gallery/page';
-import MainPage from '@/app/main/page';
-import RSVPPage from '@/app/rsvp/page';
+import EventPage from '@app/event/page';
+import Gallery from '@app/gallery/page';
+import MainPage from '@app/main/page';
+import RSVPPage from '@app/rsvp/page';
 import Loader from '@components/Loader';
 
 export default function Home() {

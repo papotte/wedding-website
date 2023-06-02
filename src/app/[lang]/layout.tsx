@@ -2,11 +2,14 @@ import React, { PropsWithChildren } from 'react';
 
 import { Metadata } from 'next';
 
-import { betterSaturday, inter, montserrat, sacramento, workSans } from '@/app/fonts';
 import Header from '@components/Header';
 import Nav from '@components/Nav';
+import { i18n } from '@i18n';
 import '@styles/globals.scss';
 import { eventData } from '@utils/eventData';
+
+
+import { betterSaturday, inter, montserrat, sacramento, workSans } from './fonts';
 
 const { initials } = eventData;
 
@@ -18,9 +21,10 @@ export const metadata: Metadata = {
     },
 };
 
+
 export async function generateStaticParams() {
-    return [{ lang: 'en' }, { lang: 'es' }];
-}
+    return i18n.locales.map((locale) => ({ lang: locale }))
+  }
 
 type RootProps = {
     params: {
