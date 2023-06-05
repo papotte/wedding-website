@@ -17,7 +17,7 @@ export const sacramento = Sacramento({
 });
 
 export const betterSaturday = localFont({
-    src: '../styles/fonts/better_saturday.woff2',
+    src: './styles/fonts/better_saturday.woff2',
     variable: '--font-better-saturday',
 });
 

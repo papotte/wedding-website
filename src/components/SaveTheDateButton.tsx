@@ -3,10 +3,10 @@
 import React from 'react';
 
 import { AddToCalendarButton } from 'add-to-calendar-button-react';
+import { useTranslations } from 'next-intl';
 
 import Loader from '@components/Loader';
 import { useEventData } from '@hooks/useEventData';
-
 
 const styleVars: string[] = [
     '--btn-background: var(--button-background)',
@@ -20,15 +20,15 @@ const styleVars: string[] = [
 
 const SaveTheDateButton = () => {
     const { data, error } = useEventData();
+    const t = useTranslations('calendar');
 
-    if (error) return <div>Failed to load</div>;
-    if (!data) return <Loader />;
+    if (!data) return <Loader error={error} />;
 
     const { title, location, formattedDates } = data;
     return (
         <AddToCalendarButton
             styleLight={styleVars.join(';')}
-            name={title + ' Wedding'}
+            name={t('title', { title: title })}
             options={['Apple', 'Google', 'iCal']}
             location={location.map}
             startDate={formattedDates.startDate}
@@ -38,7 +38,7 @@ const SaveTheDateButton = () => {
             timeZone="Europe/Berlin"
             buttonStyle="round"
             lightMode="light"
-            label="Save the date"></AddToCalendarButton>
+            label={t('button')}></AddToCalendarButton>
     );
 };
 

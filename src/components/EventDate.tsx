@@ -1,19 +1,18 @@
 'use client';
+
 import React, { Fragment } from 'react';
 
 import { format } from 'date-fns';
 
-import CountdownTimer from '@components/CountdownTimer';
+import CountdownTimer from '@components/countdown';
 import Loader from '@components/Loader';
 import SaveTheDateButton from '@components/SaveTheDateButton';
 import { useEventData } from '@hooks/useEventData';
 
-
 const EventDate = () => {
     const { data, error } = useEventData();
 
-    if (error) return <div>Failed to load</div>;
-    if (!data) return <Loader />;
+    if (!data) return <Loader error={error} />;
 
     const { date } = data;
     const formattedDate = format(new Date(date), 'MMMM dd, yyyy');

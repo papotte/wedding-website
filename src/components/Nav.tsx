@@ -1,7 +1,8 @@
-'use client';
 import React from 'react';
 
 import Link from 'next/link';
+import { useLocale, useTranslations } from 'next-intl';
+import TLink from 'next-intl/link';
 
 import styles from './Nav.module.scss';
 
@@ -36,6 +37,34 @@ const NavigationLink = ({ item }: React.PropsWithRef<{ item: NavItem }>) => {
         </li>
     );
 };
+const locales = ['en', 'es'];
+
+const ChangeLanguage = () => {
+    const t = useTranslations('language');
+    const locale = useLocale();
+    console.log(locale);
+
+    return (
+        <div className="dropdown dropdown-end">
+            <label tabIndex={0}>{t('button')}</label>
+            <ul
+                tabIndex={0}
+                data-theme="alt"
+                className="menu dropdown-content p-2 shadow bg-base-100 rounded-box w-52 mt-4">
+                {locales.map((lng) => {
+                    if (lng !== locale)
+                        return (
+                            <li key={lng}>
+                                <TLink href="/" locale={lng}>
+                                    {t(`${lng}`)}
+                                </TLink>
+                            </li>
+                        );
+                })}
+            </ul>
+        </div>
+    );
+};
 
 const Nav = () => {
     const showGallery: boolean = process.env.eventHasPassed === 'true';
@@ -55,6 +84,9 @@ const Nav = () => {
                     {filteredLinks.map((item, index) => (
                         <NavigationLink item={item} key={index} />
                     ))}
+                    <li className={styles.NavigationMenuLink}>
+                        <ChangeLanguage />
+                    </li>
                 </ul>
             </div>
         </div>

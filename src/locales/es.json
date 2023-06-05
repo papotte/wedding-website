@@ -1,0 +1,25 @@
+{
+  "error": {
+    "loading": "Se ha producido un error."
+  },
+  "countdown": {
+    "days": "días",
+    "hours": "horas",
+    "minutes": "minutos",
+    "seconds": "segundos",
+    "expired": "This event has ended!!!",
+    "subtitle": "We hope you had fun!"
+  },
+  "language": {
+    "button": "Idioma",
+    "en": "Inglés",
+    "es": "Español"
+  },
+  "Main": {
+    "title": "¡Nos casamos!"
+  },
+  "calendar": {
+    "title": "{{title}} Wedding",
+    "button": "Save the date"
+  }
+}

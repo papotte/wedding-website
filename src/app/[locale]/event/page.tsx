@@ -1,4 +1,4 @@
-import EventDetails from '@/app/event/eventDetails';
+import EventDetails from './eventDetails';
 
 const Event = () => {
     return (

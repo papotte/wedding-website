@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Contact from '@/app/success/contact';
+import Contact from '@app/success/contact';
 
 import styles from './page.module.scss';
 

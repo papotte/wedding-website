@@ -1,4 +1,5 @@
 'use client';
+
 import React from 'react';
 
 import Loader from '@components/Loader';
@@ -7,8 +8,7 @@ import { useEventData } from '@hooks/useEventData';
 const EventTitle = () => {
     const { data, error } = useEventData();
 
-    if (error) return <div>Failed to load</div>;
-    if (!data) return <Loader />;
+    if (!data) return <Loader error={error} />;
 
     const { title } = data;
 
