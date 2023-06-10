@@ -17,9 +17,6 @@ export const formatDates = (start: Date, end: Date) => {
         startTime: formatTime(start),
         endDate: formatDate(end),
         endTime: formatTime(end),
-        dayMonth: format(start, 'cccc d'),
-        monthYear: format(start, 'MMMM, yyyy'),
-        fullDate: format(start, 'MMMM d, yyyy')
     };
 };
 let generateEvents = (strDate: string) => {
@@ -35,15 +32,15 @@ let generateEvents = (strDate: string) => {
             ceremony: {
                 start: ceremonyStart,
                 end: ceremonyEnd,
-                formatted: formatDates(ceremonyStart, ceremonyEnd)
+                formatted: formatDates(ceremonyStart, ceremonyEnd),
             },
             party: {
                 start: partyStart,
                 end: partyEnd,
-                formatted: formatDates(partyStart, partyEnd)
-            }
+                formatted: formatDates(partyStart, partyEnd),
+            },
         },
-        formattedDates: formatDates(ceremonyStart, partyEnd)
+        formattedDates: formatDates(ceremonyStart, partyEnd),
     };
 };
 type ED = EventData & {
@@ -63,9 +60,9 @@ const useEventData = () => {
     return {
         data: {
             ...data,
-            ...generateEvents(data.date)
+            ...generateEvents(data.date),
         },
-        error
+        error,
     };
 };
 

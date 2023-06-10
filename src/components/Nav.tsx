@@ -42,7 +42,6 @@ const locales = ['en', 'es'];
 const ChangeLanguage = () => {
     const t = useTranslations('language');
     const locale = useLocale();
-    console.log(locale);
 
     return (
         <div className="dropdown dropdown-end">

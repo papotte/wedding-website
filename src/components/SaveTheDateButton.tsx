@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { Fragment } from 'react';
 
 import { AddToCalendarButton } from 'add-to-calendar-button-react';
 import { useTranslations } from 'next-intl';
@@ -20,25 +20,30 @@ const styleVars: string[] = [
 
 const SaveTheDateButton = () => {
     const { data, error } = useEventData();
-    const t = useTranslations('calendar');
+    const t = useTranslations('Calendar');
 
     if (!data) return <Loader error={error} />;
 
     const { title, location, formattedDates } = data;
+
+    const calendarTitle = t('title', { title });
     return (
-        <AddToCalendarButton
-            styleLight={styleVars.join(';')}
-            name={t('title', { title: title })}
-            options={['Apple', 'Google', 'iCal']}
-            location={location.map}
-            startDate={formattedDates.startDate}
-            endDate={formattedDates.endDate}
-            startTime={formattedDates.startTime}
-            endTime={formattedDates.endTime}
-            timeZone="Europe/Berlin"
-            buttonStyle="round"
-            lightMode="light"
-            label={t('button')}></AddToCalendarButton>
+        <Fragment>
+            <h2>{calendarTitle}</h2>
+            <AddToCalendarButton
+                styleLight={styleVars.join(';')}
+                name={calendarTitle}
+                options={['Apple', 'Google', 'iCal']}
+                location={location.map}
+                startDate={formattedDates.startDate}
+                endDate={formattedDates.endDate}
+                startTime={formattedDates.startTime}
+                endTime={formattedDates.endTime}
+                timeZone="Europe/Berlin"
+                buttonStyle="round"
+                lightMode="light"
+                label={t('button')}></AddToCalendarButton>
+        </Fragment>
     );
 };
 

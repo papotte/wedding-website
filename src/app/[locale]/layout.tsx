@@ -1,12 +1,14 @@
+import React, { ReactNode } from 'react';
+
+import { notFound } from 'next/navigation';
+import { NextIntlClientProvider, useLocale } from 'next-intl';
+import { getTranslations } from 'next-intl/server';
+
 import { betterSaturday, inter, montserrat, sacramento, workSans } from '@/fonts';
 import Header from '@components/Header';
 import Nav from '@components/Nav';
 import { eventData } from '@utils/eventData';
-import { NextIntlClientProvider, useLocale } from 'next-intl';
-import { getTranslations } from 'next-intl/server';
 
-import { notFound } from 'next/navigation';
-import React, { ReactNode } from 'react';
 
 const { initials } = eventData;
 

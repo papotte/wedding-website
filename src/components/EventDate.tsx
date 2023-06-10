@@ -2,7 +2,7 @@
 
 import React, { Fragment } from 'react';
 
-import { format } from 'date-fns';
+import { useFormatter } from 'next-intl';
 
 import CountdownTimer from '@components/countdown';
 import Loader from '@components/Loader';
@@ -11,11 +11,13 @@ import { useEventData } from '@hooks/useEventData';
 
 const EventDate = () => {
     const { data, error } = useEventData();
+    const formatter = useFormatter();
 
     if (!data) return <Loader error={error} />;
 
-    const { date } = data;
-    const formattedDate = format(new Date(date), 'MMMM dd, yyyy');
+    const date = new Date(data.date);
+
+    const formattedDate = formatter.dateTime(date, { dateStyle: 'long' });
     const eventHasPassed: boolean = process.env.eventHasPassed === 'true';
 
     return (

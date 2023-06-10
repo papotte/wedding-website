@@ -1,18 +1,23 @@
 'use client';
 import React, { Fragment } from 'react';
 
+import { useFormatter } from 'next-intl';
+
 import Loader from '@components/Loader';
 import { useEventData } from '@hooks/useEventData';
 
 const EventDetails = () => {
     const { data, error } = useEventData();
+    const formatter = useFormatter();
 
-    if (error) return <div>Failed to load</div>;
-    if (!data) return <Loader />;
+    if (!data) return <Loader error={error} />;
+
+    const date = new Date(data.date);
+    const formattedDate = formatter.dateTime(date, { dateStyle: 'long' });
 
     return (
         <Fragment>
-            {data.formattedDates.fullDate} - {data.location.city}
+            {formattedDate} - {data.location.city}
         </Fragment>
     );
 };

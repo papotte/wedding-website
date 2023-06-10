@@ -1,10 +1,17 @@
 {
+  "Calendar": {
+    "button": "Save the date",
+    "title": "{title}'s Wedding"
+  },
+  "Event": {
+    "ceremony": "Ceremony",
+    "party": "Wedding Party",
+    "time": "{time, date, ::kk:mm}",
+    "weekday": "{date, date, ::ccccc d}",
+    "month": "{date, date, ::MMMM, yyyy}"
+  },
   "Main": {
     "title": "We are getting married"
-  },
-  "calendar": {
-    "button": "Save the date",
-    "title": "{title} Wedding"
   },
   "countdown": {
     "days": "days",
