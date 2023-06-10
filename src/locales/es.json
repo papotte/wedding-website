@@ -1,25 +1,28 @@
 {
-  "error": {
-    "loading": "Se ha producido un error."
+  "Main": {
+    "title": "¡Nos casamos!"
+  },
+  "calendar": {
+    "button": "Save the date",
+    "title": "{{title}} Wedding"
   },
   "countdown": {
     "days": "días",
+    "expired": "This event has ended!!!",
     "hours": "horas",
     "minutes": "minutos",
     "seconds": "segundos",
-    "expired": "This event has ended!!!",
     "subtitle": "We hope you had fun!"
+  },
+  "error": {
+    "loading": "Se ha producido un error."
   },
   "language": {
     "button": "Idioma",
     "en": "Inglés",
     "es": "Español"
   },
-  "Main": {
-    "title": "¡Nos casamos!"
-  },
-  "calendar": {
-    "title": "{{title}} Wedding",
-    "button": "Save the date"
+  "metadata": {
+    "title": "Boda de {initials}"
   }
 }

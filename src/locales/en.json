@@ -1,28 +1,28 @@
 {
-  "error": {
-    "loading": "Failed to load"
+  "Main": {
+    "title": "We are getting married"
+  },
+  "calendar": {
+    "button": "Save the date",
+    "title": "{title} Wedding"
   },
   "countdown": {
     "days": "days",
+    "expired": "This event has ended!!!",
     "hours": "hours",
     "minutes": "minutes",
     "seconds": "seconds",
-    "expired": "This event has ended!!!",
     "subtitle": "We hope you had fun!"
   },
-  "metadata": {
-    "title": "{initials} Wedding"
+  "error": {
+    "loading": "Failed to load"
   },
   "language": {
     "button": "Language",
     "en": "English",
     "es": "Spanish"
   },
-  "Main": {
-    "title": "We are getting married"
-  },
-  "calendar": {
-    "title": "{title} Wedding",
-    "button": "Save the date"
+  "metadata": {
+    "title": "{initials} Wedding"
   }
 }
