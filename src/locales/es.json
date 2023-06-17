@@ -1,25 +1,25 @@
 {
   "Calendar": {
-    "button": "Save the date",
+    "button": "Apunta el día",
     "title": "Matrimonio de {title}"
   },
   "Event": {
     "ceremony": "Ceremonia",
+    "month": "{date, date, ::MMMM, yyyy}",
     "party": "Fiesta",
     "time": "{date, date, ::kk:mm}",
-    "weekday": "{date, date, ::ccccc d}",
-    "month": "{date, date, ::MMMM, yyyy}"
+    "weekday": "{date, date, ::ccccc d}"
   },
   "Main": {
     "title": "¡Nos casamos!"
   },
   "countdown": {
     "days": "días",
-    "expired": "This event has ended!!!",
+    "expired": "¡Este evento se ha terminado!",
     "hours": "horas",
     "minutes": "minutos",
     "seconds": "segundos",
-    "subtitle": "We hope you had fun!"
+    "subtitle": "Esperamos que te lo hayas pasado bien."
   },
   "error": {
     "loading": "Se ha producido un error."

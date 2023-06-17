@@ -5,10 +5,10 @@
   },
   "Event": {
     "ceremony": "Ceremony",
+    "month": "{date, date, ::MMMM, yyyy}",
     "party": "Wedding Party",
     "time": "{time, date, ::kk:mm}",
-    "weekday": "{date, date, ::ccccc d}",
-    "month": "{date, date, ::MMMM, yyyy}"
+    "weekday": "{date, date, ::ccccc d}"
   },
   "Main": {
     "title": "We are getting married"
