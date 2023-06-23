@@ -29,7 +29,6 @@ const SaveTheDateButton = () => {
     const calendarTitle = t('title', { title });
     return (
         <Fragment>
-            <h2>{calendarTitle}</h2>
             <AddToCalendarButton
                 styleLight={styleVars.join(';')}
                 name={calendarTitle}

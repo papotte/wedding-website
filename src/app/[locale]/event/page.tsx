@@ -1,12 +1,17 @@
-import EventDetails from './eventDetails';
+import EventDetails from '@app/main/eventDetails';
+
+import EventTimeline from './eventTimeline';
 
 const Event = () => {
     return (
-        <div className="w-full bg-primary-900 bg-event bg-cover bg-center" data-theme="alt">
+        <div className="w-full bg-tertiary-900 bg-cover bg-center" data-theme="alt">
             <div className="page w-3/4 flex gap-6 flex-col items-center text-center">
-                <p className="uppercase text-gray-400 text-sm font-semibold">Our Special Events</p>
-                <h2>Wedding Events</h2>
-                <EventDetails />
+                <h2>The Event</h2>
+                <h3 className="text-white">
+                    <EventDetails />
+                </h3>
+                <p className="text-gray-300">We invite you to celebrate our wedding</p>
+                <EventTimeline />
             </div>
         </div>
     );

@@ -1,0 +1,99 @@
+$screen-md: 992px !default;
+$screen-xs: 480px !default;
+
+
+.timeline {
+    @apply relative py-5 list-none;
+
+    &:before {
+        @apply -mx-6 md:mx-0 top-0 bottom-0 w-px absolute left-1/2 bg-background;
+        content: " ";
+    }
+
+    .timelineBox {
+        @apply mb-5 relative after:clear-both;
+
+        &:before, &:after {
+            content: " ";
+            display: table;
+        }
+
+        .timelinePanel {
+            @apply rounded relative w-2/5 float-left p-8 border-solid border-background border bg-foreground flex flex-col;
+
+            &:before, &:after {
+                content: " ";
+            }
+
+            &:before {
+                @apply absolute top-[80px] right-[-15px] inline-block border-solid border-[15px] border-r-0  border-y-transparent
+                border-x-background;
+            }
+
+            &:after {
+                @apply absolute top-[81px] right-[-14px] inline-block border-solid border-[14px] border-r-0 border-x-foreground border-y-transparent;
+            }
+        }
+
+        &:nth-child(odd) {
+            .timelinePanel {
+                @apply float-left text-right;
+            }
+
+            .date {
+                @apply justify-end;
+            }
+        }
+
+        &:nth-child(even) {
+            .timelinePanel {
+                @apply float-right text-left;
+                &:before {
+                    @apply border-r-[15px] border-l-0 right-auto left-[-15px];
+                }
+
+                &:after {
+                    @apply border-r-[14px] border-l-0 right-auto left-[-14px];
+                }
+            }
+
+            .date {
+                @apply justify-start;
+            }
+        }
+
+
+        .timelineBadge {
+            @apply rounded-full bg-cover bg-no-repeat absolute z-50 left-1/2 top-4 aspect-square w-[160px] ml-[-80px];
+            background-position: top center;
+
+            @media screen and (max-width: $screen-xs) {
+                width: 60px;
+                height: 60px;
+                margin-left: -20px !important;
+            }
+        }
+
+        .timelineTitle {
+            @apply mt-0;
+        }
+    }
+}
+
+
+.date {
+    @apply flex flex-row gap-2 mb-8 mt-2 uppercase tracking-widest text-xs;
+
+    > * {
+        @apply inline-block;
+    }
+}
+
+.timelineBody > p,
+.timelineBody > ul {
+    @apply mb-0;
+}
+
+.timelineBody > p {
+    @apply mt-2 min-w-[300px];
+}

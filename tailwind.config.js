@@ -24,6 +24,7 @@ module.exports = {
         extend: {
             colors: {
                 ...customColors,
+                foreground: customColors.tertiary.DEFAULT,
                 black: colors.black,
                 white: colors.white,
             },

@@ -35,3 +35,5 @@ For further configuration, see the documentation for Tailwind CSS.
 
 This project adds internationalization by default. Included languages are English and Spanish. To add or modify, change
 the `locales` array in `src/middleware.ts` and add the appropriate translation files in `./src/locales/[locale].json`.
+
+TODO: Add accommodation information
