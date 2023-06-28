@@ -27,15 +27,26 @@
     },
     "month": "{date, date, ::MMMM, yyyy}",
     "time": "{date, date, ::kk:mm}",
-    "weekday": "{date, date, ::ccccc d}",
+    "weekday": "{date, date, ::ccccc d}"
+  },
+  "Details": {
+    "title": "Información importante",
     "dresscode": {
-      "title": "Código de vestimenta",
+      "title": "¿cómo me visto?",
       "description": "Te sugerimos lucir un atuendo cómodo pero elegante para nuestra boda. Queremos que te sientas libre para disfrutar de la comida y el baile sin restricciones, pero también nos gustaría mantener un ambiente formal.\n\nLa ceremonia se llevará a cabo al aire libre, frente al lago, en octubre en Berlín, donde las temperaturas oscilarán entre los 15 y los 19 grados.\n\nTe recomendamos optar por prendas versátiles que te permitan adaptarte a los posibles cambios de temperatura."
+    },
+    "directions": {
+      "title": "¿cómo llego?",
+      "description": "Aquí va el mapa. Para llegar, usa un coche, o perece en el intento"
+    },
+    "lodging": {
+      "title": "¿dónde me puedo quedar?",
+      "description": "Información sobre el hotel!"
     }
   },
   "Main": {
-    "title": "¡Nos casamos!",
-    "subtitle": "El 22 de noviembre de 2020, en plena pandemia, tuvimos nuestro primer compromiso en Berlín. Tras esperar más de un año, el 1 de enero de 2022 nos comprometimos de nuevo en una hermosa playa de Santa Marta. Y hemos seguido esperando desde entonces. Después de tres años, finalmente ha llegado el momento que tanto anhelábamos. El 7 de octubre nos casaremos y nos encantaría contar con tu presencia en este día tan especial."
+    "title": "¡Dijo que sí!",
+    "subtitle": "El 22 de noviembre de 2020, en plena pandemia, tuvimos nuestro primer compromiso en Berlín. Tras esperar más de un año, el 1 de enero de 2022 nos comprometimos de nuevo en una hermosa playa de Santa Marta. Y hemos seguido esperando desde entonces. Después de tres años, finalmente ha llegado el momento que tanto anhelábamos."
   },
   "RSVP": {
     "title": "¿Asistirás?",

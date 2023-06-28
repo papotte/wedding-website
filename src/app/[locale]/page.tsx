@@ -1,7 +1,9 @@
 import React, { Fragment, Suspense } from 'react';
 
+import DetailsPage from '@app/details/page';
 import EventPage from '@app/event/page';
 import Gallery from '@app/gallery/page';
+import MainPage from '@app/main/page';
 import RSVPPage from '@app/rsvp/page';
 import Loader from '@components/Loader';
 
@@ -13,13 +15,17 @@ export default function Home() {
         <Fragment>
             {showDetails && (
                 <Fragment>
+                    <MainPage />
                     <EventPage />
                     {showGallery ? (
                         <Suspense fallback={<Loader />}>
                             <Gallery />
                         </Suspense>
                     ) : (
-                        <RSVPPage />
+                        <Fragment>
+                            <DetailsPage />
+                            <RSVPPage />
+                        </Fragment>
                     )}
                 </Fragment>
             )}

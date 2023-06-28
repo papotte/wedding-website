@@ -1,3 +1,10 @@
+.engagementPicture {
+    @apply block bg-engagement bg-cover bg-center bg-no-repeat flex-grow;
+    min-width: 40%;
+    min-height: 400px;
+    border-radius: 100%;
+}
+
 .coupleWrap {
     @apply grid md:flex;
 

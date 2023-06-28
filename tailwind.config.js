@@ -39,6 +39,7 @@ module.exports = {
                 trees: 'url("/images/trees.png")',
                 event: 'linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url("/images/img_bg_3.jpg")',
                 rsvp: 'linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url("/images/img_bg_4.jpg")',
+                engagement: 'url("/images/engagement.jpeg")',
             },
             keyframes: {
                 enterFromRight: {

@@ -1,7 +1,6 @@
 import { useTranslations } from 'next-intl';
 
-import EventDetails from '@app/main/eventDetails';
-
+import EventDetails from './eventDetails';
 import EventTimeline from './eventTimeline';
 
 const Event = () => {
@@ -15,10 +14,6 @@ const Event = () => {
                     <EventDetails />
                 </h3>
                 <EventTimeline />
-                <div className="items-center pt-8">
-                    <h2 className="text-5xl text-left">{t('dresscode.title')}</h2>
-                    <p className="text-right">{t('dresscode.description')}</p>
-                </div>
             </div>
         </div>
     );
