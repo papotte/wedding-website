@@ -9,7 +9,6 @@ import Header from '@components/Header';
 import Nav from '@components/Nav';
 import { eventData } from '@utils/eventData';
 
-
 const { initials } = eventData;
 
 type Props = {
@@ -50,10 +49,11 @@ export default async function LocaleLayout({ children, params }: Props) {
             <body>
                 <NextIntlClientProvider locale={locale} messages={messages}>
                     {showDetails && <Nav />}
-                    <div className="w-full flex flex-col items-center justify-between">
+                    <div className="body w-full min-h-screen flex flex-col items-center justify-between bg-simple">
                         <Header />
                         {children}
                     </div>
+                    <div className="footer bg-trees"></div>
                 </NextIntlClientProvider>
             </body>
         </html>

@@ -1,5 +1,5 @@
 .NavigationMenuLink {
-    @apply text-sm text-white;
+    @apply text-sm text-secondary-900 font-semibold;
     text-transform: uppercase;
 
     font-family: theme('fontFamily.primary');
@@ -7,7 +7,7 @@
     text-decoration: none;
     outline: none;
     user-select: none;
-    opacity: 0.5;
+    opacity: 0.8;
 }
 
 .NavigationMenuLink:focus {

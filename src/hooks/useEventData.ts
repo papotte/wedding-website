@@ -1,4 +1,4 @@
-import { addHours, format, parseISO } from 'date-fns';
+import { addHours, format, parseISO, subHours } from 'date-fns';
 import useSWR from 'swr';
 
 import { EventData } from '@models/EventData';
@@ -21,18 +21,36 @@ export const formatDates = (start: Date, end: Date) => {
 };
 let generateEvents = (strDate: string) => {
     const startTime: Date = parseISO(strDate);
+
+    const arrivalStart = subHours(startTime, 1);
     const ceremonyStart = startTime;
-    const partyEnd = addHours(ceremonyStart, 10);
     const ceremonyEnd = addHours(ceremonyStart, 2);
-    const partyStart = addHours(ceremonyStart, 3);
+    const dinnerStart = addHours(ceremonyStart, 3);
+    const partyStart = addHours(ceremonyStart, 5);
+    const partyEnd = addHours(ceremonyStart, 10);
 
     return {
         date: strDate,
         events: {
+            arrival: {
+                start: arrivalStart,
+                end: ceremonyStart,
+                formatted: formatDates(arrivalStart, ceremonyStart),
+            },
             ceremony: {
                 start: ceremonyStart,
                 end: ceremonyEnd,
                 formatted: formatDates(ceremonyStart, ceremonyEnd),
+            },
+            photos: {
+                start: ceremonyEnd,
+                end: partyStart,
+                formatted: formatDates(ceremonyEnd, partyStart),
+            },
+            dinner: {
+                start: dinnerStart,
+                end: partyStart,
+                formatted: formatDates(dinnerStart, partyStart),
             },
             party: {
                 start: partyStart,

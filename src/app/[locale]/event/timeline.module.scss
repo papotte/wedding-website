@@ -3,41 +3,33 @@ $screen-xs: 480px !default;
 
 
 .timeline {
-    @apply relative py-5 list-none;
+    @apply relative py-5 list-none w-full;
+    display: flex;
+    flex-direction: column;
 
     &:before {
-        @apply -mx-6 md:mx-0 top-0 bottom-0 w-px absolute left-1/2 bg-background;
+        @apply top-0 bottom-0 absolute left-1/2 bg-secondary-900/90 rounded;
         content: " ";
+        width: 4px;
+        margin-right: -2px;
     }
 
     .timelineBox {
-        @apply mb-5 relative after:clear-both;
-
-        &:before, &:after {
-            content: " ";
-            display: table;
-        }
+        @apply mb-5 after:clear-both flex items-center gap-x-0.5;
 
         .timelinePanel {
-            @apply rounded relative w-2/5 float-left p-8 border-solid border-background border bg-foreground flex flex-col;
-
-            &:before, &:after {
-                content: " ";
-            }
-
-            &:before {
-                @apply absolute top-[80px] right-[-15px] inline-block border-solid border-[15px] border-r-0  border-y-transparent
-                border-x-background;
-            }
-
-            &:after {
-                @apply absolute top-[81px] right-[-14px] inline-block border-solid border-[14px] border-r-0 border-x-foreground border-y-transparent;
-            }
+            @apply rounded w-1/2 px-4 md:px-8 flex flex-col;
         }
 
         &:nth-child(odd) {
+            @apply justify-end flex-row-reverse;
+
             .timelinePanel {
-                @apply float-left text-right;
+                @apply text-right;
+            }
+
+            .timelineBadge {
+                @apply -ml-3;
             }
 
             .date {
@@ -46,15 +38,14 @@ $screen-xs: 480px !default;
         }
 
         &:nth-child(even) {
-            .timelinePanel {
-                @apply float-right text-left;
-                &:before {
-                    @apply border-r-[15px] border-l-0 right-auto left-[-15px];
-                }
+            @apply justify-end;
 
-                &:after {
-                    @apply border-r-[14px] border-l-0 right-auto left-[-14px];
-                }
+            .timelinePanel {
+                @apply text-left;
+            }
+
+            .timelineBadge {
+                @apply -mr-4;
             }
 
             .date {
@@ -62,27 +53,22 @@ $screen-xs: 480px !default;
             }
         }
 
-
-        .timelineBadge {
-            @apply rounded-full bg-cover bg-no-repeat absolute z-50 left-1/2 top-4 aspect-square w-[160px] ml-[-80px];
-            background-position: top center;
-
-            @media screen and (max-width: $screen-xs) {
-                width: 60px;
-                height: 60px;
-                margin-left: -20px !important;
-            }
-        }
-
         .timelineTitle {
             @apply mt-0;
+        }
+
+        .timelineBody {
+            @apply block overflow-hidden text-sm;
+        }
+
+        .timelineBadge {
+            @apply rounded-full h-5 w-5 bg-secondary-900;
         }
     }
 }
 
-
 .date {
-    @apply flex flex-row gap-2 mb-8 mt-2 uppercase tracking-widest text-xs;
+    @apply flex flex-row gap-2 mb-8 mt-2 uppercase tracking-wide md:tracking-widest items-center flex-wrap font-semibold;
 
     > * {
         @apply inline-block;
