@@ -3,8 +3,6 @@ const withNextIntl = require('next-intl/plugin')();
 
 const path = require('path');
 
-const ghPages = process.env.NEXT_PUBLIC_DEPLOY_TARGET === 'gh-pages';
-const output = ghPages ? 'export' : undefined;
 const eventDate = process.env.NEXT_PUBLIC_EVENT_DATE;
 const currentTime = new Date().getTime();
 const countDownDate = parseISO(eventDate).getTime();
@@ -20,15 +18,18 @@ const nextConfig = {
     },
     env: {
         eventHasPassed: currentTime > countDownDate,
-        forceStatic: ghPages,
-    },
-    basePath: '/nextjs-github-pages',
-    reactStrictMode: true,
-    output,
-    images: {
-        unoptimized: ghPages,
     },
 };
+
+const ghPages = process.env.NEXT_PUBLIC_DEPLOY_TARGET === 'gh-pages';
+
+if (ghPages) {
+    nextConfig.output = 'export';
+    nextConfig.basePath = '/nextjs-github-pages;';
+    nextConfig.images = {
+        unoptimized: true,
+    };
+}
 console.log(nextConfig);
 
 module.exports = withNextIntl(nextConfig);

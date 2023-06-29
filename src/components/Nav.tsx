@@ -1,8 +1,9 @@
 import React from 'react';
 
 import Link from 'next/link';
-import { useLocale, useTranslations } from 'next-intl';
+import { useTranslations } from 'next-intl';
 import TLink from 'next-intl/link';
+
 
 import styles from './Nav.module.scss';
 
@@ -41,7 +42,7 @@ const locales = ['en', 'es'];
 
 const ChangeLanguage = () => {
     const t = useTranslations('language');
-    const locale = useLocale();
+    const locale = 'en';
 
     return (
         <div className="dropdown dropdown-end">
