@@ -20,7 +20,9 @@ const nextConfig = {
     },
     env: {
         eventHasPassed: currentTime > countDownDate,
+        forceStatic: ghPages,
     },
+    basePath: '/nextjs-github-pages',
     reactStrictMode: true,
     output,
     images: {
