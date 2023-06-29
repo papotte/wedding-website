@@ -3,6 +3,8 @@ const withNextIntl = require('next-intl/plugin')();
 
 const path = require('path');
 
+const ghPages = process.env.DEPLOY_TARGET === 'gh-pages';
+const output = ghPages ? 'export' : undefined;
 const eventDate = process.env.NEXT_PUBLIC_EVENT_DATE;
 const currentTime = new Date().getTime();
 const countDownDate = parseISO(eventDate).getTime();
@@ -18,6 +20,10 @@ const nextConfig = {
     },
     env: {
         eventHasPassed: currentTime > countDownDate,
+    },
+    output,
+    images: {
+        unoptimized: ghPages,
     },
 };
 
