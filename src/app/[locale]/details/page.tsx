@@ -12,11 +12,11 @@ const Details = () => {
                     <p className="text-right">{t('dresscode.description')}</p>
                 </div>
                 <div className="items-center pt-8">
-                    <h2 className="text-5xl text-left">{t('directions.title')}</h2>
+                    <h5 className="text-5xl text-left">{t('directions.title')}</h5>
                     <p className="text-right">{t('directions.description')}</p>
                 </div>
                 <div className="items-center pt-8">
-                    <h2 className="text-5xl text-left">{t('lodging.title')}</h2>
+                    <h5 className="text-5xl text-left">{t('lodging.title')}</h5>
                     <p className="text-right">{t('lodging.description')}</p>
                 </div>
             </div>

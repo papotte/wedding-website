@@ -34,12 +34,11 @@ module.exports = {
                 fancy: ['var(--font-better-saturday)', 'serif'],
             },
             backgroundImage: {
-                banner: 'linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.3)), url("/images/background_1.png")',
                 simple: 'linear-gradient(rgba(255,255,255,.5), rgba(0,0,0,.2)), url("/images/background.png")',
                 trees: 'url("/images/trees.png")',
-                event: 'linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url("/images/img_bg_3.jpg")',
-                rsvp: 'linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url("/images/img_bg_4.jpg")',
                 engagement: 'url("/images/engagement.jpeg")',
+                birds1: 'url("/images/birds_1.webp")',
+                birds2: 'url("/images/birds_2.webp")',
             },
             keyframes: {
                 enterFromRight: {
