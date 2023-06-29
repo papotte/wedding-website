@@ -1,6 +1,8 @@
 import { ReactNode } from 'react';
 import '@styles/globals.scss';
 
+export const dynamic = 'force-static';
+
 type Props = {
     children: ReactNode;
 };

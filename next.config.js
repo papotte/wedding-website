@@ -21,11 +21,13 @@ const nextConfig = {
     env: {
         eventHasPassed: currentTime > countDownDate,
     },
+    reactStrictMode: true,
     output,
     images: {
         unoptimized: ghPages,
     },
 };
+console.log(nextConfig);
 
 module.exports = withNextIntl(nextConfig);
 // module.exports = nextConfig;
