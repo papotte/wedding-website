@@ -3,48 +3,60 @@
     "button": "Save the date",
     "title": "{title}'s Wedding"
   },
+  "Details": {
+    "directions": {
+      "title": "How do I get there?",
+      "description": "The hotel is about 50 minutes from Berlin by car. Getting there by public transport is quite difficult, so we recommend renting a car for the day."
+    },
+    "dresscode": {
+      "title": "How should I dress?",
+      "description": "We suggest you wear a comfortable but elegant outfit for our wedding. We want you to feel free to enjoy the food and dancing without restrictions, but we would also like to maintain a formal atmosphere.\n\nThe ceremony will take place outdoors, in front of the lake, in October in Berlin, where temperatures will range between 15 and 19 degrees.\n\nWe recommend opting for versatile garments that allow you to adapt to possible changes in temperature."
+    },
+    "lodging": {
+      "title": "Where can I stay?",
+      "description": "We have reserved a block of rooms at the hotel where the ceremony will take place. If you would like to book a room, please contact us so that we can send you the booking code."
+    },
+    "title": "Important information"
+  },
   "Event": {
-    "title": "Our Wedding",
-    "subtitle": "We invite you to celebrate our wedding",
     "arrival": {
-      "title": "Arrival",
-      "description": "If you are staying in the hotel, remember to check in before the ceremony. If you are not staying in the hotel, we recommend you to arrive at least 30 minutes before the ceremony."
+      "description": "If you are staying in the hotel, remember to check in before the ceremony. If you are not staying in the hotel, we recommend you to arrive at least 30 minutes before the ceremony.",
+      "title": "Arrival"
     },
     "ceremony": {
-      "title": "Ceremony",
-      "description": "We would like to share with you a very special moment for us. We will be waiting for you in front of the lake."
-    },
-    "photos": {
-      "title": "Photos",
-      "description": "Capture the moment! We will have a photographer during the ceremony and the dinner. We will share the photos with you after the wedding."
+      "description": "We would like to share with you a very special moment for us. We will be waiting for you in front of the lake.",
+      "title": "Ceremony"
     },
     "dinner": {
-      "title": "Dinner",
-      "description": "We will have a dinner after the ceremony. We will have a buffet full of vegan and vegetarian dishes. If you have any food allergies, please let us know."
-    },
-    "party": {
-      "title": "Party",
-      "description": "It's time to dance! We will have a DJ playing music and a dance floor waiting for you. We will have a bar with drinks and snacks."
+      "description": "We will have a dinner after the ceremony. We will have a buffet full of vegan and vegetarian dishes. If you have any food allergies, please let us know.",
+      "title": "Dinner"
     },
     "month": "{date, date, ::MMMM, yyyy}",
-    "time": "{time, date, ::kk:mm}",
-    "weekday": "{date, date, ::ccccc d}",
-    "dresscode": {
-      "title": "Dress code",
-      "description": "We want you to feel comfortable. We will be wearing casual clothes. We recommend you to wear comfortable shoes."
-    }
+    "party": {
+      "description": "It's time to dance! We will have a DJ playing music and a dance floor waiting for you. We will have a bar with drinks and snacks.",
+      "title": "Party"
+    },
+    "photos": {
+      "description": "Capture the moment! We will have a photographer during the ceremony and the dinner. We will share the photos with you after the wedding.",
+      "title": "Photos"
+    },
+    "subtitle": "We invite you to celebrate our wedding",
+    "time": "{date, date, ::kk:mm}",
+    "title": "Our Wedding",
+    "weekday": "{date, date, ::ccccc d}"
   },
   "Main": {
+    "subtitle": "On November 22, 2020, in the midst of the pandemic, we had our first engagement. After waiting for over a year, on January 1, 2022, we got engaged again on a beautiful beach in Santa Marta. And we have been waiting ever since. After three years, the time we have been longing for has finally come.",
     "title": "We are getting married"
   },
   "RSVP": {
-    "title": "Are you attending?",
     "description": "Please fill-up the form to notify you that you're attending. Thanks.",
     "form": {
-      "name": "Full name",
+      "button": "I am attending",
       "email": "Email",
-      "button": "I am attending"
-    }
+      "name": "Full name"
+    },
+    "title": "Are you attending?"
   },
   "countdown": {
     "days": "days",

@@ -55,7 +55,7 @@
             background: transparent;
 
             &:before {
-                @apply absolute w-full h-full;
+                @apply absolute w-full h-full pointer-events-none;
                 opacity: 0.5;
                 content: ' ';
             }

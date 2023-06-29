@@ -77,7 +77,7 @@ const Nav = () => {
     });
 
     return (
-        <div className={`navbar absolute`}>
+        <div className={`navbar absolute z-50`}>
             <div className="navbar-end flex-1">
                 <ul className="menu menu-horizontal px-1">
                     {filteredLinks.map((item, index) => (
