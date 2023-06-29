@@ -1,5 +1,6 @@
 import React, { ReactNode } from 'react';
 
+import { Metadata, ResolvingMetadata } from 'next';
 import { notFound } from 'next/navigation';
 import { NextIntlClientProvider, useLocale } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
@@ -9,6 +10,7 @@ import Header from '@components/Header';
 import Nav from '@components/Nav';
 import { eventData } from '@utils/eventData';
 
+
 const { initials } = eventData;
 
 type Props = {
@@ -16,14 +18,19 @@ type Props = {
     params: { locale: string };
 };
 
-export async function generateMetadata() {
+export async function generateMetadata(parent?: ResolvingMetadata): Promise<Metadata> {
     const t = await getTranslations();
+
+    const previousImages = (await parent)?.openGraph?.images || [];
 
     return {
         title: t('metadata.title', { initials }),
         icons: {
             icon: '/logo-rings.svg',
             shortcut: '/favicon.ico',
+        },
+        openGraph: {
+            images: ['/api/og', ...previousImages],
         },
     };
 }
