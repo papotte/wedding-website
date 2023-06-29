@@ -1,8 +1,23 @@
+'use client';
+
+import { useForm, ValidationError } from '@formspree/react';
 import { useTranslations } from 'next-intl';
 
 export default function RSVP() {
-    const t = useTranslations('RSVP');
+    const formId: string = process.env.NEXT_PUBLIC_FORM_ID || 'YOUR_FORM_ID';
 
+    const [state, handleSubmit] = useForm(formId);
+
+    const t = useTranslations('RSVP');
+    if (state.succeeded) {
+        return (
+            <div className="w-full">
+                <div className="page w-3/4 flex gap-6 flex-col">
+                    <h5>{t('success')}</h5>
+                </div>
+            </div>
+        );
+    }
     return (
         <div className="w-full">
             <div className="page w-3/4 flex gap-6 flex-col">
@@ -11,9 +26,7 @@ export default function RSVP() {
                 <form
                     className="flex flex-col md:flex-row gap-8 items-end"
                     name="rsvp"
-                    action="/success"
-                    method="POST"
-                    data-netlify="true">
+                    onSubmit={handleSubmit}>
                     <input type="hidden" name="form-name" value="rsvp" />
 
                     <div className="form-control">
@@ -26,21 +39,24 @@ export default function RSVP() {
                             placeholder={t('form.name')}
                             className="input input-bordered w-full max-w-xs"
                         />
+                        <ValidationError prefix="Name" field="name" errors={state.errors} />
                     </div>
                     <div className="form-control">
                         <label className="label">
                             <span className="label-text">{t('form.email')}</span>
                         </label>
                         <input
-                            type="text"
+                            type="email"
                             name="email"
                             placeholder={t('form.email')}
                             className="input input-bordered w-full max-w-xs"
                         />
+                        <ValidationError prefix="Email" field="email" errors={state.errors} />
                     </div>
-                    <button className="btn btn-accent" type="submit">
+                    <button className="btn btn-accent" type="submit" disabled={state.submitting}>
                         {t('form.button')}
                     </button>
+                    <ValidationError errors={state.errors} />
                 </form>
             </div>
         </div>

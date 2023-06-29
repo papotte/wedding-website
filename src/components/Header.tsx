@@ -7,7 +7,7 @@ import EventTitle from '@components/EventTitle';
 import Loader from '@components/Loader';
 
 const Header = () => {
-    const t = useTranslations('Main');
+    const t = useTranslations('Header');
     return (
         <div className="hero py-[9rem]">
             <div className="hero-content text-center flex-col">

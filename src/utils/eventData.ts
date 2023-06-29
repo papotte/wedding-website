@@ -10,6 +10,7 @@ export const defaultData = {
         address: '123 Main St',
         url: 'https://www.google.com/maps?q=123+Main+St',
         map: 'https://goo.gl/maps/123',
+        embed: '',
     },
 };
 
@@ -27,6 +28,7 @@ export const eventData: EventData = {
         city: process.env.NEXT_PUBLIC_EVENT_LOCATION_CITY ?? defaultData.location.city,
         address: process.env.NEXT_PUBLIC_EVENT_LOCATION_ADDRESS ?? defaultData.location.address,
         map: process.env.NEXT_PUBLIC_EVENT_LOCATION_MAP_URL ?? defaultData.location.map,
+        embed: process.env.NEXT_PUBLIC_EVENT_LOCATION_MAP_EMBED ?? defaultData.location.embed,
         url: process.env.NEXT_PUBLIC_EVENT_LOCATION_URL ?? defaultData.location.url,
     },
 };

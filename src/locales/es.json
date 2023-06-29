@@ -45,6 +45,9 @@
     "title": "Nuestra boda",
     "weekday": "{date, date, ::ccccc d}"
   },
+  "Header": {
+    "title": "¡Nos casamos!"
+  },
   "Main": {
     "subtitle": "El 22 de noviembre de 2020, en plena pandemia, tuvimos nuestro primer compromiso en Berlín. Tras esperar más de un año, el 1 de enero de 2022 nos comprometimos de nuevo en una hermosa playa de Santa Marta. Y hemos seguido esperando desde entonces. Después de tres años, finalmente ha llegado el momento que tanto anhelábamos.",
     "title": "¡Dijo que sí!"
@@ -56,6 +59,7 @@
       "email": "Correo electrónico",
       "name": "Nombre"
     },
+    "success": "¡Gracias por confirmar tu asistencia!",
     "title": "¿Asistirás?"
   },
   "countdown": {

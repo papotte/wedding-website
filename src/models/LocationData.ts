@@ -3,5 +3,6 @@ export type LocationDetails = {
     city: string;
     map: string;
     url: string;
+    embed: string;
     name: string;
-}
+};

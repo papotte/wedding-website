@@ -5,16 +5,16 @@
   },
   "Details": {
     "directions": {
-      "title": "How do I get there?",
-      "description": "The hotel is about 50 minutes from Berlin by car. Getting there by public transport is quite difficult, so we recommend renting a car for the day."
+      "description": "The hotel is about 50 minutes from Berlin by car. Getting there by public transport is quite difficult, so we recommend renting a car for the day.",
+      "title": "How do I get there?"
     },
     "dresscode": {
-      "title": "How should I dress?",
-      "description": "We suggest you wear a comfortable but elegant outfit for our wedding. We want you to feel free to enjoy the food and dancing without restrictions, but we would also like to maintain a formal atmosphere.\n\nThe ceremony will take place outdoors, in front of the lake, in October in Berlin, where temperatures will range between 15 and 19 degrees.\n\nWe recommend opting for versatile garments that allow you to adapt to possible changes in temperature."
+      "description": "We suggest you wear a comfortable but elegant outfit for our wedding. We want you to feel free to enjoy the food and dancing without restrictions, but we would also like to maintain a formal atmosphere.\n\nThe ceremony will take place outdoors, in front of the lake, in October in Berlin, where temperatures will range between 15 and 19 degrees.\n\nWe recommend opting for versatile garments that allow you to adapt to possible changes in temperature.",
+      "title": "How should I dress?"
     },
     "lodging": {
-      "title": "Where can I stay?",
-      "description": "We have reserved a block of rooms at the hotel where the ceremony will take place. If you would like to book a room, please contact us so that we can send you the booking code."
+      "description": "We have reserved a block of rooms at the hotel where the ceremony will take place. If you would like to book a room, please contact us so that we can send you the booking code.",
+      "title": "Where can I stay?"
     },
     "title": "Important information"
   },
@@ -24,16 +24,16 @@
       "title": "Arrival"
     },
     "ceremony": {
-      "description": "We would like to share with you a very special moment for us. We will be waiting for you in front of the lake.",
+      "description": "We would like to share with you a very special moment for us. We will be waiting for you in front of the lake. In case of bad weather, we will move to the cozy Refugio to make sure that the magic of the moment does not get rained on.",
       "title": "Ceremony"
     },
     "dinner": {
-      "description": "We will have a dinner after the ceremony. We will have a buffet full of vegan and vegetarian dishes. If you have any food allergies, please let us know.",
+      "description": "We will have dinner after the ceremony. We will have a buffet full of vegan and vegetarian dishes. If you have any food allergies, please let us know.",
       "title": "Dinner"
     },
     "month": "{date, date, ::MMMM, yyyy}",
     "party": {
-      "description": "It's time to dance! We will have a DJ playing music and a dance floor waiting for you. We will have a bar with drinks and snacks.",
+      "description": "It's time to dance! The DJ is playing music and the dance floor is waiting for you. There will be a bar with drinks and snacks.",
       "title": "Party"
     },
     "photos": {
@@ -45,9 +45,12 @@
     "title": "Our Wedding",
     "weekday": "{date, date, ::ccccc d}"
   },
+  "Header": {
+    "title": "We are getting married!"
+  },
   "Main": {
     "subtitle": "On November 22, 2020, in the midst of the pandemic, we had our first engagement. After waiting for over a year, on January 1, 2022, we got engaged again on a beautiful beach in Santa Marta. And we have been waiting ever since. After three years, the time we have been longing for has finally come.",
-    "title": "We are getting married"
+    "title": "We said yes!"
   },
   "RSVP": {
     "description": "Please fill-up the form to notify you that you're attending. Thanks.",
@@ -56,6 +59,7 @@
       "email": "Email",
       "name": "Full name"
     },
+    "success": "Thanks for your submission!",
     "title": "Are you attending?"
   },
   "countdown": {

@@ -1,9 +1,18 @@
+'use client';
+
 import { useTranslations } from 'next-intl';
+
+import Loader from '@components/Loader';
+import { useEventData } from '@hooks/useEventData';
 
 import styles from './page.module.scss';
 
 const Details = () => {
     const t = useTranslations('Details');
+
+    const { data } = useEventData();
+
+    if (!data) return <Loader />;
 
     return (
         <div className="w-full">
@@ -21,7 +30,7 @@ const Details = () => {
                     </div>
                     <div className={styles.map}>
                         <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5957.079738461267!2d13.8334114!3d52.5553493!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a833a697a09c97%3A0x7421130f2f8357b8!2sSeehotel%20Villago!5e1!3m2!1sen!2sde!4v1688035942473!5m2!1sen!2sde"
+                            src={data.location.embed}
                             width="400"
                             height="300"
                             style={{ border: 0 }}
