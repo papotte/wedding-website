@@ -1,0 +1,18 @@
+.details {
+    @apply flex gap-8 flex-col max-w-full;
+    .row {
+        @apply flex gap-4;
+    }
+
+    h5 {
+        @apply text-5xl text-left w-auto min-w-min md:w-60 md:[min-width:15rem] shrink px-2;
+    }
+
+    .content {
+        @apply text-right whitespace-break-spaces grow-0;
+    }
+
+    .map {
+        @apply justify-end md:-mt-8;
+    }
+}
