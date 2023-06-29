@@ -3,6 +3,7 @@ const withNextIntl = require('next-intl/plugin')();
 
 const path = require('path');
 
+console.log(process.env);
 const ghPages = process.env.NEXT_PUBLIC_DEPLOY_TARGET === 'gh-pages';
 const output = ghPages ? 'export' : undefined;
 const eventDate = process.env.NEXT_PUBLIC_EVENT_DATE;
