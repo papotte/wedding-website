@@ -8,6 +8,8 @@ For getting started, make a copy of `.env.template` and add the information for 
 This is a [Next.js](https://nextjs.org/) v13 project that uses
 the [Next Netlify Starter Template](https://github.com/netlify-templates/next-netlify-starter).
 
+We are deploying on Vercel, but this project is also compatible with Netlify.
+
 ## Table of Contents:
 
 - [Getting Started](#getting-started)
@@ -36,4 +38,10 @@ For further configuration, see the documentation for Tailwind CSS.
 This project adds internationalization by default. Included languages are English and Spanish. To add or modify, change
 the `locales` array in `src/middleware.ts` and add the appropriate translation files in `./src/locales/[locale].json`.
 
-TODO: Add accommodation information
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use
+the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme)
+from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
