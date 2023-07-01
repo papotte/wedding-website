@@ -24,7 +24,7 @@ const SaveTheDateButton = () => {
 
     if (!data) return <Loader error={error} />;
 
-    const { title, location, formattedDates } = data;
+    const { title, location, formattedDates, timezone } = data;
 
     const calendarTitle = t('title', { title });
     return (
@@ -38,7 +38,7 @@ const SaveTheDateButton = () => {
                 endDate={formattedDates.endDate}
                 startTime={formattedDates.startTime}
                 endTime={formattedDates.endTime}
-                timeZone="Europe/Berlin"
+                timeZone={timezone}
                 buttonStyle="round"
                 lightMode="light"
                 label={t('button')}></AddToCalendarButton>

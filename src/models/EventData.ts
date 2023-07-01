@@ -5,6 +5,7 @@ export interface EventData {
     title: string;
     initials: string;
     date: string;
+    timezone: string;
     location: LocationDetails;
     email?: string;
 }
