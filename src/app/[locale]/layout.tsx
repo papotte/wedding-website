@@ -6,9 +6,9 @@ import { NextIntlClientProvider, useLocale } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
 
 import { betterSaturday, inter, montserrat, sacramento, workSans } from '@/fonts';
-import Header from '@components/Header';
 import Nav from '@components/Nav';
 import { eventData } from '@utils/eventData';
+
 
 
 const { initials } = eventData;
@@ -57,7 +57,6 @@ export default async function LocaleLayout({ children, params }: Props) {
                 <NextIntlClientProvider locale={locale} messages={messages}>
                     {showDetails && <Nav />}
                     <div className="body w-full min-h-screen flex flex-col items-center justify-between bg-simple">
-                        <Header />
                         {children}
                     </div>
                     <div className="footer bg-trees"></div>

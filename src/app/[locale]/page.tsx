@@ -5,6 +5,7 @@ import EventPage from '@app/event/page';
 import Gallery from '@app/gallery/page';
 import MainPage from '@app/main/page';
 import RSVPPage from '@app/rsvp/page';
+import Header from '@components/Header';
 import Loader from '@components/Loader';
 
 export default function Home() {
@@ -13,6 +14,8 @@ export default function Home() {
 
     return (
         <Fragment>
+            <Header />
+
             {showDetails && (
                 <Fragment>
                     <MainPage />

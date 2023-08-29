@@ -1,0 +1,33 @@
+.details {
+    @apply flex gap-16 flex-col max-w-full md:w-2/3;
+    .row {
+        @apply flex gap-4;
+    }
+
+    h5 {
+        @apply text-5xl text-left w-auto min-w-min md:w-60 md:[min-width:15rem] shrink px-2;
+    }
+
+    .content {
+        @apply text-right whitespace-break-spaces grow-0 flex-col items-end ;
+    }
+
+    .map {
+        @apply justify-end md:-mt-8;
+    }
+
+    .list {
+        @apply flex flex-col list-disc items-start;
+        div {
+            @apply list-item
+        }
+
+        h6 {
+            @apply mt-4
+        }
+    }
+
+    .hint {
+        @apply text-sm text-gray-600;
+    }
+}

@@ -3,6 +3,32 @@
     "button": "Save the date",
     "title": "{title}'s Wedding"
   },
+  "Booking": {
+    "title": "Room and transportation",
+    "hotel": {
+      "title": "Hotel",
+      "description": "We have reserved a block of rooms at the hotel where the ceremony will take place. The price per night is 148€ for a double room. If you would like to book a room, please email the hotel at info@villago.de with the following information: ",
+      "code": "Booking code: {code}",
+      "dates": "Dates: {start} - {end}",
+      "hint": "Payment will happen on site. If you need help with the booking process, contact Ross or Raquel."
+    },
+    "directions": {
+      "title": "Shuttle",
+      "description": "The hotel is about 50 minutes from Berlin by car. We will organise a shuttle that guests can take.",
+      "arrival": {
+        "title": "To the hotel",
+        "time": "Departure Time: {date, time, short}, {date, date, medium}",
+        "location": "Start location: Berlin Alexanderplatz"
+      },
+      "departure": {
+        "title": "Back to Berlin",
+        "time": "Departure Time: {date, time, short}, {date, date, medium}",
+        "location": "End location: Berlin Alexanderplatz"
+      },
+      "hint": "Exact location will be shared closer to the date. The shuttle won't wait, so make sure to be on time!",
+      "alternative": "Alternatively, you can rent a car or take the S5 to \"Strausberg\" and then take a bus or taxi to the hotel."
+    }
+  },
   "Details": {
     "directions": {
       "description": "The hotel is about 50 minutes from Berlin by car. Getting there by public transport is quite difficult, so we recommend renting a car for the day.",

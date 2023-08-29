@@ -3,6 +3,32 @@
     "button": "Apunta el día",
     "title": "Boda de {title}"
   },
+  "Booking": {
+    "title": "Hotel y transporte",
+    "hotel": {
+      "title": "Hotel",
+      "description": "Hemos reservado un contingente de habitaciones en el hotel de la ceremonia. El precio por noche es de 148€ por habitación doble. Si deseas reservar una habitación, envía un correo electrónico en inglés o alemán al hotel a info@villago.de con la siguiente información: ",
+      "code": "Booking code: {code}",
+      "dates": "Dates: {start} - {end}",
+      "hint": "El pago se realizará en el hotel. Si necesitas ayuda con el proceso de reserva, ponte en contacto con Ross o Raquel."
+    },
+    "directions": {
+      "title": "Transporte",
+      "description": "El hotel se encuentra a unos 50 minutos de Berlin en coche. Hemos organizado un servicio de transporte para los invitados que se alojen en el hotel.",
+      "arrival": {
+        "title": "De Berlin al hotel",
+        "time": "Salida: {date, time, short}, {date, date, medium}",
+        "location": "Punto de encuentro: Berlin Alexanderplatz"
+      },
+      "departure": {
+        "title": "Del hotel a Berlin",
+        "time": "Salida: {date, time, short}, {date, date, medium}",
+        "location": "Punto de llegada: Berlin Alexanderplatz"
+      },
+      "hint": "La ubicación exacta se compartirá más cerca de la fecha. El autobús no esperará, así que asegúrate de llegar a tiempo.",
+      "alternative": "Alternativamente, puedes alquilar un coche o tomar el S5 hasta \"Strausberg\" y luego tomar un autobús o un taxi hasta el hotel."
+    }
+  },
   "Details": {
     "directions": {
       "description": "El hotel se encuentra a unos 50 minutos de Berlin en coche. Llegar por medio de transporte público es bastante difícil, por eso te recomendamos alquilar un coche para el día.",
