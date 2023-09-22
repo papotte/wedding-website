@@ -3,7 +3,7 @@ import React, { ReactNode } from 'react';
 import { Metadata, ResolvingMetadata } from 'next';
 import { notFound } from 'next/navigation';
 import { NextIntlClientProvider, useLocale } from 'next-intl';
-import { getTranslations } from 'next-intl/server';
+import { getTranslator } from 'next-intl/server';
 
 import { betterSaturday, inter, montserrat, sacramento, workSans } from '@/fonts';
 import Nav from '@components/Nav';
@@ -18,8 +18,11 @@ type Props = {
     params: { locale: string };
 };
 
-export async function generateMetadata(parent?: ResolvingMetadata): Promise<Metadata> {
-    const t = await getTranslations();
+export async function generateMetadata(
+    props: Props,
+    parent?: ResolvingMetadata
+): Promise<Metadata> {
+    const t = await getTranslator(props.params.locale);
 
     const previousImages = (await parent)?.openGraph?.images || [];
 
