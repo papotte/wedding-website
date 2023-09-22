@@ -1,8 +1,11 @@
 'use client';
 
+import React from 'react';
+
 import { format } from 'date-fns';
 import { useTranslations } from 'next-intl';
 
+import Directions from '@components/Directions';
 import Loader from '@components/Loader';
 import { useEventData } from '@hooks/useEventData';
 
@@ -39,41 +42,12 @@ const Booking = () => {
                         </div>
                     </div>
                     <div className="divider"></div>
-                    <div className={styles.row}>
+                    <div className={styles.row} id="shuttle">
                         <h5>{t('directions.title')}</h5>
-                        <div className={styles.content}>
-                            {t('directions.description')}
-                            <div className={styles.list}>
-                                <h6>{t('directions.arrival.title')}</h6>
-                                <div>
-                                    {t('directions.arrival.time', {
-                                        date: data.shuttle.start,
-                                    })}
-                                </div>
-                                <div>{t('directions.arrival.location')}</div>
-                            </div>
-                            <div className={styles.hint}>{t('directions.hint')}</div>
-                            <div className={styles.list}>
-                                <h6>{t('directions.departure.title')}</h6>
-                                <div>
-                                    {t('directions.departure.time', {
-                                        date: data.shuttle.end,
-                                    })}
-                                </div>
-                                <div>{t('directions.departure.location')}</div>
-                            </div>
-                            <div className="mt-8">{t('directions.alternative')}</div>
-                        </div>
+                        <div className={styles.content}>{t('directions.description')}</div>
                     </div>
-                    <div className={styles.map}>
-                        <iframe
-                            src={data.location.embed}
-                            width="400"
-                            height="300"
-                            style={{ border: 0 }}
-                            allow=""
-                            loading="lazy"
-                            referrerPolicy="no-referrer-when-downgrade"></iframe>
+                    <div className={styles.extra}>
+                        <Directions />
                     </div>
                 </div>
             </div>

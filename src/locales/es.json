@@ -14,43 +14,53 @@
     },
     "directions": {
       "title": "Transporte",
-      "description": "El hotel se encuentra a unos 50 minutos de Berlin en coche. Hemos organizado un servicio de transporte para los invitados que se alojen en el hotel.",
-      "arrival": {
-        "title": "De Berlin al hotel",
-        "time": "Salida: {date, time, short}, {date, date, medium}",
-        "location": "Punto de encuentro: Berlin Alexanderplatz"
-      },
-      "departure": {
-        "title": "Del hotel a Berlin",
-        "time": "Salida: {date, time, short}, {date, date, medium}",
-        "location": "Punto de llegada: Berlin Alexanderplatz"
-      },
-      "hint": "La ubicación exacta se compartirá más cerca de la fecha. El autobús no esperará, así que asegúrate de llegar a tiempo.",
-      "alternative": "Alternativamente, puedes alquilar un coche o tomar el S5 hasta \"Strausberg\" y luego tomar un autobús o un taxi hasta el hotel."
+      "description": "El hotel se encuentra a unos 50 minutos de Berlin en coche. Hemos organizado un servicio de transporte para los invitados que se alojen en el hotel."
     }
+  },
+  "Directions": {
+    "arrival": {
+      "title": "De Berlin al hotel",
+      "time": "Salida: {date, time, short}, {date, date, medium}",
+      "location": "Punto de encuentro: Berlin Alexanderplatz"
+    },
+    "departure": {
+      "title": "Del hotel a Berlin",
+      "time": "Salida: {date, time, short}, {date, date, medium}",
+      "location": "Punto de llegada: Berlin Alexanderplatz"
+    },
+    "hint": "La ubicación exacta se compartirá más cerca de la fecha. El autobús no esperará, así que asegúrate de llegar a tiempo.",
+    "alternative": "Alternativamente, puedes alquilar un coche o tomar el S5 hasta \"Strausberg\" y luego tomar un autobús o un taxi hasta el hotel."
   },
   "Details": {
     "directions": {
-      "description": "El hotel se encuentra a unos 50 minutos de Berlin en coche. Llegar por medio de transporte público es bastante difícil, por eso te recomendamos alquilar un coche para el día.",
+      "description": "El hotel se encuentra a unos 50 minutos de Berlin en coche. Hemos organizado un servicio de transporte para los invitados que se alojen en el hotel.",
       "title": "¿cómo llego?"
     },
     "dresscode": {
-      "description": "Te sugerimos lucir un atuendo cómodo pero elegante para nuestra boda. Queremos que te sientas libre para disfrutar de la comida y el baile sin restricciones, pero también nos gustaría mantener un ambiente formal.\n\nLa ceremonia se llevará a cabo al aire libre, frente al lago, en octubre en Berlín, donde las temperaturas oscilarán entre los 15 y los 19 grados.\n\nTe recomendamos optar por prendas versátiles que te permitan adaptarte a los posibles cambios de temperatura.",
+      "description": "Te sugerimos lucir un atuendo cómodo pero elegante para nuestra boda. Queremos que te sientas libre para disfrutar de la comida y el baile sin restricciones, pero también nos gustaría mantener un ambiente formal.\n\nLa ceremonia se llevará a cabo al aire libre, frente al lago, en octubre en Berlín, donde las temperaturas oscilarán entre los 7 y los 15 grados.\n\nTe recomendamos optar por prendas versátiles que te permitan adaptarte a los posibles cambios de temperatura.",
       "title": "¿cómo me visto?"
     },
     "lodging": {
       "description": "Hemos reservado un contingente de habitaciones en el hotel de la ceremonia. Si deseas reservar una habitación, ponte en contacto con nosotros para que podamos enviarte el código de reserva.",
       "title": "¿dónde me puedo quedar?"
     },
+    "gifts": {
+      "title": "¿qué les puedo regalar?",
+      "description": "Si no se te ocurre nada, ¡nos encantaría recibir una donación! Puedes donar a través de transferencia bancaria o PayPal."
+    },
     "title": "Información importante"
   },
   "Event": {
+    "shuttle": {
+      "description": "El autobús está previsto que llegue al hotel 1.5 horas antes de la ceremonia. Sin embargo, no esperará a nadie, ¡así que llega a tiempo al punto de encuentro!",
+      "title": "Shuttle @ Alexanderplatz"
+    },
     "arrival": {
       "description": "Si te estás quedando en el hotel de la ceremonia, no te olvides de hacer el check-in primero para que puedan guardar tu maleta.",
       "title": "Llegada"
     },
     "ceremony": {
-      "description": "Os invitamos a compartir con nosotras una emotiva ceremonia frente al hermoso lago. En caso de que las condiciones climáticas no sean favorables, nos trasladaremos al acogedor Refugio para asegurarnos de que la magia del momento no se pase por agua.",
+      "description": "Os invitamos a compartir con nosotras una emotiva ceremonia frente al hermoso lago. En caso de que las condiciones climáticas no sean favorables, nos trasladaremos a una sala dentro del hotel para asegurarnos de que la magia del momento no se pase por agua.",
       "title": "Ceremonia"
     },
     "dinner": {

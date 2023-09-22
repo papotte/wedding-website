@@ -8,4 +8,5 @@ export interface EventData {
     timezone: string;
     location: LocationDetails;
     email?: string;
+    paypal?: string;
 }

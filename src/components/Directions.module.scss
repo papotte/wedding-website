@@ -1,0 +1,25 @@
+
+.content {
+    @apply text-right whitespace-break-spaces grow-0 flex-col items-end ;
+}
+
+.map {
+    @apply justify-end mt-4;
+    > iframe {
+        @apply w-full;
+    }
+}
+
+.list {
+    @apply flex flex-col list-disc items-start;
+    div {
+    }
+
+    h6 {
+        @apply mt-4
+    }
+}
+
+.hint {
+    @apply text-sm text-gray-600;
+}

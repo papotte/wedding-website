@@ -1,4 +1,6 @@
 'use client';
+import { Fragment } from 'react';
+
 import { ClockIcon } from '@radix-ui/react-icons';
 import { useTranslations } from 'next-intl';
 
@@ -7,6 +9,13 @@ import { useEventData } from '@hooks/useEventData';
 
 import styles from './timeline.module.scss';
 
+type Event = {
+    name: string;
+    link?: string;
+    description: string;
+    start: Date;
+    end?: Date;
+};
 const EventTimeline = () => {
     const { data } = useEventData();
     const t = useTranslations('Event');
@@ -14,7 +23,13 @@ const EventTimeline = () => {
     if (!data) return <Loader />;
 
     const { arrival, ceremony, photos, dinner, party } = data.events;
-    const events = [
+    const events: Event[] = [
+        {
+            name: t('shuttle.title'),
+            link: '#shuttle',
+            start: data.shuttle.start,
+            description: t('shuttle.description'),
+        },
         {
             name: t('arrival.title'),
             ...arrival,
@@ -48,12 +63,22 @@ const EventTimeline = () => {
                 <li key={index} className={styles.timelineBox}>
                     <div className={styles.timelineBadge}></div>
                     <div className={styles.timelinePanel}>
-                        <h3 className={styles.timelineTitle}>{event.name}</h3>
+                        {event.link ? (
+                            <a href={event.link}>
+                                <h3 className={styles.timelineTitle}>{event.name}</h3>
+                            </a>
+                        ) : (
+                            <h3 className={styles.timelineTitle}>{event.name}</h3>
+                        )}
                         <div className={styles.date}>
                             <ClockIcon />
                             <span>{t('time', { date: event.start })}</span>
-                            <span>-</span>
-                            <span>{t('time', { date: event.end })}</span>
+                            {event.end && (
+                                <Fragment>
+                                    <span>-</span>
+                                    <span>{t('time', { date: event.end })}</span>
+                                </Fragment>
+                            )}
                         </div>
                         <div className={styles.timelineBody}>{event.description}</div>
                     </div>

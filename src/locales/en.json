@@ -14,43 +14,53 @@
     },
     "directions": {
       "title": "Shuttle",
-      "description": "The hotel is about 50 minutes from Berlin by car. We will organise a shuttle that guests can take.",
-      "arrival": {
-        "title": "To the hotel",
-        "time": "Departure Time: {date, time, short}, {date, date, medium}",
-        "location": "Start location: Berlin Alexanderplatz"
-      },
-      "departure": {
-        "title": "Back to Berlin",
-        "time": "Departure Time: {date, time, short}, {date, date, medium}",
-        "location": "End location: Berlin Alexanderplatz"
-      },
-      "hint": "Exact location will be shared closer to the date. The shuttle won't wait, so make sure to be on time!",
-      "alternative": "Alternatively, you can rent a car or take the S5 to \"Strausberg\" and then take a bus or taxi to the hotel."
+      "description": "The hotel is about 50 minutes from Berlin by car. We will organise a shuttle that guests can take."
     }
+  },
+  "Directions": {
+    "arrival": {
+      "title": "To the hotel",
+      "time": "Departure Time: {date, time, short}, {date, date, medium}",
+      "location": "Start location: Berlin Alexanderplatz"
+    },
+    "departure": {
+      "title": "Back to Berlin",
+      "time": "Departure Time: {date, time, short}, {date, date, medium}",
+      "location": "End location: Berlin Alexanderplatz"
+    },
+    "hint": "Exact location will be shared closer to the date. The shuttle won't wait, so make sure to be on time!",
+    "alternative": "Alternatively, you can rent a car or take the S5 to \"Strausberg\" and then take a bus or taxi to the hotel."
   },
   "Details": {
     "directions": {
-      "description": "The hotel is about 50 minutes from Berlin by car. Getting there by public transport is quite difficult, so we recommend renting a car for the day.",
+      "description": "The hotel is about 50 minutes from Berlin by car. We will organise a shuttle that guests can take.",
       "title": "How do I get there?"
     },
     "dresscode": {
-      "description": "We suggest you wear a comfortable but elegant outfit for our wedding. We want you to feel free to enjoy the food and dancing without restrictions, but we would also like to maintain a formal atmosphere.\n\nThe ceremony will take place outdoors, in front of the lake, in October in Berlin, where temperatures will range between 15 and 19 degrees.\n\nWe recommend opting for versatile garments that allow you to adapt to possible changes in temperature.",
+      "description": "We suggest you wear a comfortable but elegant outfit for our wedding. We want you to feel free to enjoy the food and dancing without restrictions, but we would also like to maintain a formal atmosphere.\n\nThe ceremony will take place outdoors, in front of the lake, in October in Berlin, where temperatures will range between 7 and 15 degrees.\n\nWe recommend opting for versatile garments that allow you to adapt to possible changes in temperature.",
       "title": "How should I dress?"
     },
     "lodging": {
       "description": "We have reserved a block of rooms at the hotel where the ceremony will take place. If you would like to book a room, please contact us so that we can send you the booking code.",
       "title": "Where can I stay?"
     },
+    "gifts": {
+      "title": "What can I get yous?",
+      "description": "If you can't think of anything, we would love to receive a donation! You can donate via bank transfer or PayPal."
+    },
     "title": "Important information"
   },
   "Event": {
+    "shuttle": {
+      "description": "The shuttle is planned to arrive at the hotel 1.5 hours before the ceremony. It won't wait for anybody though, so be on time!",
+      "title": "Shuttle @ Alexanderplatz"
+    },
     "arrival": {
-      "description": "If you are staying in the hotel, remember to check in before the ceremony. If you are not staying in the hotel, we recommend you to arrive at least 30 minutes before the ceremony.",
+      "description": "If you are staying in the hotel, remember to check in before the ceremony, if possible. If you are not staying in the hotel, we recommend you to arrive at least 30 minutes before the ceremony.",
       "title": "Arrival"
     },
     "ceremony": {
-      "description": "We would like to share with you a very special moment for us. We will be waiting for you in front of the lake. In case of bad weather, we will move to the cozy Refugio to make sure that the magic of the moment does not get rained on.",
+      "description": "We would like to share with you a very special moment for us. We will be waiting for you in front of the lake. In case of bad weather, we will move to a room inside the hotel to make sure that the magic of the moment does not get rained on.",
       "title": "Ceremony"
     },
     "dinner": {

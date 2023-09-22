@@ -1,18 +1,28 @@
 .details {
     @apply flex gap-8 flex-col max-w-full;
     .row {
-        @apply flex gap-4;
+        @apply flex gap-4 justify-between;
     }
 
     h5 {
         @apply text-5xl text-left w-auto min-w-min md:w-60 md:[min-width:15rem] shrink px-2;
+        line-height: 1.5;
     }
 
     .content {
-        @apply text-right whitespace-break-spaces grow-0;
+        @apply text-right whitespace-break-spaces;
     }
 
-    .map {
-        @apply justify-end md:-mt-8;
+    .extra {
+        @apply items-end flex flex-col md:-mt-32;
+    }
+
+
+    .bankDetails {
+        @apply flex flex-col gap-2 text-end font-mono;
+    }
+
+    .paypal {
+
     }
 }

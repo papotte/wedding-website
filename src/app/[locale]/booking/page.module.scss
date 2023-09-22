@@ -1,33 +1,19 @@
 .details {
     @apply flex gap-16 flex-col max-w-full md:w-2/3;
     .row {
-        @apply flex gap-4;
+        @apply flex gap-4 justify-between;
     }
 
     h5 {
         @apply text-5xl text-left w-auto min-w-min md:w-60 md:[min-width:15rem] shrink px-2;
+        line-height: 1.5;
     }
 
     .content {
-        @apply text-right whitespace-break-spaces grow-0 flex-col items-end ;
+        @apply text-right whitespace-break-spaces;
     }
 
-    .map {
-        @apply justify-end md:-mt-8;
-    }
-
-    .list {
-        @apply flex flex-col list-disc items-start;
-        div {
-            @apply list-item
-        }
-
-        h6 {
-            @apply mt-4
-        }
-    }
-
-    .hint {
-        @apply text-sm text-gray-600;
+    .extra {
+        @apply items-end flex flex-col md:-mt-24;
     }
 }

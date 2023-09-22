@@ -1,7 +1,11 @@
 'use client';
 
+import React from 'react';
+
+import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 
+import Directions from '@components/Directions';
 import Loader from '@components/Loader';
 import { useEventData } from '@hooks/useEventData';
 
@@ -24,25 +28,43 @@ const Details = () => {
                         <div className={styles.content}>{t('dresscode.description')}</div>
                     </div>
                     <div className="divider"></div>
-                    <div className={styles.row}>
+
+                    <div className={styles.row} id="shuttle">
                         <h5>{t('directions.title')}</h5>
                         <div className={styles.content}>{t('directions.description')}</div>
                     </div>
-                    <div className={styles.map}>
-                        <iframe
-                            src={data.location.embed}
-                            width="400"
-                            height="300"
-                            style={{ border: 0 }}
-                            allow=""
-                            loading="lazy"
-                            referrerPolicy="no-referrer-when-downgrade"></iframe>
+                    <div className={styles.extra}>
+                        <Directions />
                     </div>
                     <div className="divider"></div>
 
                     <div className={styles.row}>
                         <h5>{t('lodging.title')}</h5>
                         <div className={styles.content}>{t('lodging.description')}</div>
+                    </div>
+
+                    <div className="divider"></div>
+
+                    <div className={styles.row}>
+                        <h5>{t('gifts.title')}</h5>
+                        <div className={styles.content}>{t('gifts.description')}</div>
+                    </div>
+                    <div className={styles.extra}>
+                        <div className={styles.bankDetails}>
+                            <span>Ross Bermúdez De La Hoz</span>
+                            <span>IBAN: DE17100110012469495445</span>
+                            <span>BIC: NTSBDEB1XXX</span>
+                        </div>
+                        <div className={styles.paypal}>
+                            <a href={'https://paypal.me/' + data.paypal} target="_blank">
+                                <Image
+                                    src="/images/paypal.svg"
+                                    alt="paypal.me"
+                                    width={300}
+                                    height={300}
+                                />
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>

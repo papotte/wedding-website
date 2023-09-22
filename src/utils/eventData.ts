@@ -26,6 +26,7 @@ export const eventData: EventData = {
     date,
     timezone: process.env.NEXT_PUBLIC_EVENT_TIMEZONE ?? defaultData.timezone,
     email: process.env.NEXT_PUBLIC_EMAIL,
+    paypal: process.env.NEXT_PUBLIC_PAYPAL_ID,
     location: {
         name: process.env.NEXT_PUBLIC_EVENT_LOCATION_NAME ?? defaultData.location.name,
         city: process.env.NEXT_PUBLIC_EVENT_LOCATION_CITY ?? defaultData.location.city,

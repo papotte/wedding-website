@@ -9,8 +9,6 @@ import { betterSaturday, inter, montserrat, sacramento, workSans } from '@/fonts
 import Nav from '@components/Nav';
 import { eventData } from '@utils/eventData';
 
-
-
 const { initials } = eventData;
 
 type Props = {
@@ -61,6 +59,7 @@ export default async function LocaleLayout({ children, params }: Props) {
                     {showDetails && <Nav />}
                     <div className="body w-full min-h-screen flex flex-col items-center justify-between bg-simple">
                         {children}
+                        <div className="mb-24"></div>
                     </div>
                     <div className="footer bg-trees"></div>
                 </NextIntlClientProvider>
