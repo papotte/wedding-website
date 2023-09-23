@@ -22,7 +22,7 @@ const EventTimeline = () => {
 
     if (!data) return <Loader />;
 
-    const { arrival, ceremony, photos, dinner, party } = data.events;
+    const { arrival, ceremony, photos, dinner, party, breakfast } = data.events;
     const events: Event[] = [
         {
             name: t('shuttle.title'),
@@ -54,6 +54,16 @@ const EventTimeline = () => {
             name: t('party.title'),
             ...party,
             description: t('party.description'),
+        },
+        {
+            name: t('breakfast.title'),
+            ...breakfast,
+            description: t('breakfast.description'),
+        },
+        {
+            name: t('shuttle2.title'),
+            start: data.shuttle.end,
+            description: t('shuttle2.description'),
         },
     ];
 

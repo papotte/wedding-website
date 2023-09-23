@@ -53,7 +53,11 @@
   "Event": {
     "shuttle": {
       "description": "El autobús está previsto que llegue al hotel 1.5 horas antes de la ceremonia. Sin embargo, no esperará a nadie, ¡así que llega a tiempo al punto de encuentro!",
-      "title": "Shuttle @ Alexanderplatz"
+      "title": "Shuttle desde Alexanderplatz"
+    },
+    "shuttle2": {
+      "description": "El autobús debería llevarte de vuelta a Berlin en aproximadamente una hora. Sin embargo, no esperará a nadie, ¡así que llega a tiempo!",
+      "title": "Shuttle a Alexanderplatz"
     },
     "arrival": {
       "description": "Si te estás quedando en el hotel de la ceremonia, no te olvides de hacer el check-in primero para que puedan guardar tu maleta.",
@@ -75,6 +79,10 @@
     "photos": {
       "description": "Queremos capturar esos preciosos momentos con una sesión de fotos especial para nosotras y nuestros seres queridos.",
       "title": "Fotos"
+    },
+    "breakfast": {
+      "description": "Amanece que no es poco. Y para cerrar la boda, desayunaremos juntos en el restaurante del hotel. Esperamos que esto ayude a recuperar fuerzas para el viaje de vuelta.",
+      "title": "Desayuno"
     },
     "subtitle": "Te invitamos a celebrar nuestra boda en Alemania",
     "time": "{date, date, ::kk:mm}",

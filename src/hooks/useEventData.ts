@@ -31,6 +31,8 @@ let generateEvents = (strDate: string) => {
     const partyStart = addHours(ceremonyStart, 5);
     const partyEnd = addHours(ceremonyStart, 10);
     const shuttleEnd = setHours(partyEnd, 12);
+    const breakfastStart = addHours(partyEnd, 8);
+    const breakfastEnd = addMinutes(breakfastStart, 150);
 
     return {
         date: strDate,
@@ -64,6 +66,11 @@ let generateEvents = (strDate: string) => {
                 end: partyEnd,
                 formatted: formatDates(partyStart, partyEnd),
             },
+            breakfast: {
+                start: breakfastStart,
+                end: breakfastEnd,
+                formatted: formatDates(partyStart, partyEnd),
+            }
         },
         shuttle: {
             start: shuttleStart,

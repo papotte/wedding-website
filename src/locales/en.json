@@ -53,7 +53,11 @@
   "Event": {
     "shuttle": {
       "description": "The shuttle is planned to arrive at the hotel 1.5 hours before the ceremony. It won't wait for anybody though, so be on time!",
-      "title": "Shuttle @ Alexanderplatz"
+      "title": "Shuttle from Alexanderplatz"
+    },
+    "shuttle2": {
+      "description": "The shuttle should get you back to Berlin in about an hour. It won't wait for anybody though, so be on time!",
+      "title": "Shuttle to Alexanderplatz"
     },
     "arrival": {
       "description": "If you are staying in the hotel, remember to check in before the ceremony, if possible. If you are not staying in the hotel, we recommend you to arrive at least 30 minutes before the ceremony.",
@@ -75,6 +79,10 @@
     "photos": {
       "description": "Capture the moment! We will have a photographer during the ceremony and the dinner. We will share the photos with you after the wedding.",
       "title": "Photos"
+    },
+    "breakfast": {
+      "description": "For the grand finale: We will have breakfast together in the hotel restaurant. We hope this helps you recover your strength for the trip back.",
+      "title": "Breakfast"
     },
     "subtitle": "We invite you to celebrate our wedding",
     "time": "{date, date, ::kk:mm}",
